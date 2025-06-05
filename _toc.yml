@@ -1,0 +1,29 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: chapters/intro
+options:
+  numbered: 2
+chapters:
+- file: chapters/prawdopodobienstwo_klasyczne/prawdopodobienstwo_klasyczne
+  sections:
+  - file: chapters/prawdopodobienstwo_klasyczne/zadania
+- file: chapters/prawdopodobienstwo_geometryczne/prawdopodobienstwo_geometryczne
+  sections:
+  - file: chapters/prawdopodobienstwo_geometryczne/zadania
+- file: chapters/schemat_bernoulliego/schemat_bernoulliego
+  sections:
+  - file: chapters/schemat_bernoulliego/zadania
+- file: chapters/prawdopodobienstwo_warunkowe_zdarzenia_niezalezne/prawdopodobienstwo_warunkowe_zdarzenia_niezalezne
+  sections:
+  - file: chapters/prawdopodobienstwo_warunkowe_zdarzenia_niezalezne/zadania
+- file: chapters/prawdopodobienstwo_calkowite_wzor_bayesa/prawdopodobienstwo_calkowite_wzor_bayesa
+  sections:
+  - file: chapters/prawdopodobienstwo_calkowite_wzor_bayesa/zadania
+- file: chapters/zmienne_losowe_dyskretne/zmienne_losowe_dyskretne
+  sections:
+  - file: chapters/zmienne_losowe_dyskretne/zadania
+- file: chapters/zmienne_losowe_ciagle/zmienne_losowe_ciagle
+  sections:
+  - file: chapters/zmienne_losowe_ciagle/zadania
