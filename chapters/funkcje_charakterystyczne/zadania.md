@@ -134,7 +134,9 @@ Zmienna losowa $X$ ma rozkład prawdopodobieństwa o funkcji charakterystycznej 
 
 $Y = aX + b,$
 
-$\phi_Y(t) = E[e^{it(aX+b)}] = \int\limits_{-\infty}^\infty e^{it(ax+b)} f(x) dx =  \int\limits_{-\infty}^\infty e^{itax+itb} f(x) dx = e^{itb} \int\limits_{-\infty}^\infty e^{itax} f(x) dx = e^{itb}\phi(at)$
+$\phi_Y(t) = E[e^{it(aX+b)}] = \int\limits_{-\infty}^\infty e^{it(ax+b)} f(x) dx =  \int\limits_{-\infty}^\infty e^{itax+itb} f(x) dx =$
+
+$=e^{itb} \int\limits_{-\infty}^\infty e^{itax} f(x) dx = e^{itb}\phi(at)$
 ```
 
 ## Zadanie 3
