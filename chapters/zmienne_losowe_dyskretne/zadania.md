@@ -207,7 +207,9 @@ Należy sumować kolejne prawdopodobieństwa $p_i$:
 d)\
 $E(X) = 0\cdot0.1 + 1\cdot0.3 + 2\cdot0.4 + 3\cdot0.2 = 1.7,$
 
-$Var(X) = (0-1.7)^2\cdot0.1 + (1-1.7)^2\cdot0.3 + (2-1.7)^2\cdot0.4 + (3-1.7)^2\cdot0.2$ = 0.81.
+$\begin{aligned}Var(X) &= (0-1.7)^2\cdot0.1 + (1-1.7)^2\cdot0.3 + (2-1.7)^2\cdot0.4 + \\
+&+ (3-1.7)^2\cdot0.2 = \\
+&= 0.81. \end{aligned}$
 ```
 
 ## Zadanie 5
@@ -283,14 +285,14 @@ c)
 
 d)
 
-$$
+$
 F_Y(y) = \begin{cases}
 0   & \text{dla } x \le -10,       \\
 0.5 & \text{dla } -10 < x \le 80,  \\
 0.8 & \text{dla } 80 < x \le 170,  \\
 1   & \text{dla } x > 170.         \\
 \end{cases}
-$$
+$
 
 e)
 
@@ -724,20 +726,20 @@ Zmienna losowa $X$ przyjmuje trzy wartości: 0, 1 i 2. Wiadomo, ze $E(X)=1$ oraz
 
 ```{dropdown} Rozwiązanie
 
-$$\begin{cases}
+$\begin{cases}
 1 = p_1 + 2p_2 \\
 1.5 = p_1 + 4p_2
-\end{cases}$$
+\end{cases}$
 
-$$\begin{cases}
+$\begin{cases}
 p_1 = 1 - 2p_2 \\
 1.5 = 1 - 2p_2 + 4p_2
-\end{cases}$$
+\end{cases}$
 
-$$\begin{cases}
+$\begin{cases}
 p_2 = 0.25 \\
 p_1 = 0.5
-\end{cases}$$
+\end{cases}$
 
 $p_0 = 1- 0.5 - 0.25 = 0.25$
 
@@ -868,7 +870,13 @@ Aby obliczyć powyższą sumę można skorzystać z metody różniczkowania szer
 
 $x = 1 - p$
 
-$\sum\limits_{k=1}^\infty kx^{k-1} = \sum\limits_{k=1}^\infty \left( k\frac{x^k}{k} \right)' = \left( \sum\limits_{k=1}^\infty x^k \right)' = \left( \frac{x}{1-x} \right)' = \frac{1-x+x}{(1-x)^2}=\frac{1}{(1-x)^2} = \frac{1}{(1-1+p)^2} = \frac{1}{p^2},$
+$\sum\limits_{k=1}^\infty kx^{k-1} = \sum\limits_{k=1}^\infty \left( k\frac{x^k}{k} \right)' = $
+
+$= \left( \sum\limits_{k=1}^\infty x^k \right)' = \left( \frac{x}{1-x} \right)' = $
+
+$= \frac{1-x+x}{(1-x)^2}=\frac{1}{(1-x)^2} = $
+
+$ = \frac{1}{(1-1+p)^2} = \frac{1}{p^2},$
 
 $E(X) = p\frac{1}{p^2} = \frac{1}{p}.$
 ```
@@ -886,15 +894,19 @@ Dystrybuanta:
 
 $P(X \le x) = \sum\limits_{i = 1}^n p_i = \sum\limits_{i = 1}^n p^i = p\frac{1-p^n}{1-p}=1-0.5^n,$
 
-$$F(x)=
+$F(x)=
 \begin{cases}
 0       & \text{dla } x \in (-\infty, 1] \\
 1-0.5^n & \text{dla } x \in (n, n+1], n=1, 2, 3... \\
-\end{cases}$$
+\end{cases}$
 
 Wartość oczekiwana:
 
-$E(X) = \sum\limits_{k=1}^{\infty} kp^k = p \sum\limits_{k=1}^{\infty} kp^{k-1} = p \sum\limits_{k=1}^{\infty} \left( k\frac{p^k}{k} \right)' = p \left( \sum\limits_{k=1}^{\infty} p^k \right)' = p \left( \frac{p}{1-p} \right)' = p \frac{1-p+p}{(1-p)^2} = \frac{p}{(1-p)^2} = \frac{1}{0.5} = 2.$
+$\begin{aligned}E(X) &= \sum\limits_{k=1}^{\infty} kp^k = p \sum\limits_{k=1}^{\infty} kp^{k-1} = \\
+&= p \sum\limits_{k=1}^{\infty} \left( k\frac{p^k}{k} \right)' = p \left( \sum\limits_{k=1}^{\infty} p^k \right)' = \\
+&= p \left( \frac{p}{1-p} \right)' = p \frac{1-p+p}{(1-p)^2} = \\
+&= \frac{p}{(1-p)^2} = \frac{1}{0.5} =\\
+&= 2.\end{aligned}$
 ```
 
 ## Zadanie 30
@@ -1074,11 +1086,10 @@ Korzystając z własności wartości oczekiwanej zmiennej losowej $X$ wykazać, 
 
 ```{dropdown} Rozwiązanie
 
-$Var(X) $\
-$= E\{[X-E(X)]^2\} $\
-$= E\{X^2 - 2XE(X) +[E(X)]^2\} $\
-$= E(X^2) - 2E(X)E[E(X)] + E\{[E(X)]^2 \} $\
-$= E(X^2) - 2E(X)E(X) + [E(X)]^2 $\
-$= E(X^2) - 2[E(X)]^2 + [E(X)]^2 $\
-$= E(X^2) - [E(X)]^2$
+$\begin{aligned}Var(X) &= E\{[X-E(X)]^2\} = \\
+&= E\{X^2 - 2XE(X) +[E(X)]^2\} = \\
+&= E(X^2) - 2E(X)E[E(X)] + E\{[E(X)]^2 \} =\\
+&= E(X^2) - 2E(X)E(X) + [E(X)]^2 = \\
+&= E(X^2) - 2[E(X)]^2 + [E(X)]^2 = \\
+&= E(X^2) - [E(X)]^2 \end{aligned}$
 ```
