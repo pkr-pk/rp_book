@@ -1,6 +1,7 @@
 # Zadania
 
 ## Zadanie 1
+
 Wyznaczyć funkcję charakterystyczną rozkładu: \
 a) zero-jedynkowego, \
 b) geometrycznego, \
@@ -17,7 +18,7 @@ f) Laplace'a o gęstości
 
 $f(x) = \frac{1}{2}e^{-|x|}.$
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 a) 
 
@@ -123,21 +124,24 @@ $=\frac{1}{it+1} - \lim\limits_{N\to\infty} e^{-N}\frac{\cos(Nt) - i\sin(Nt)}{it
 Drugi i czwarty składnik jest zerem, ponieważ są to granice iloczynu funkcji, w których pierwszy czynnik dąży do zera a drugi jest funkcją ograniczoną. Otrzymuję więc:
 
 $\phi(t) = \frac{1}{2}\left[\frac{1}{it+1} - \frac{1}{it-1}  \right] = \frac{1}{2}\left[\frac{it-1}{i^2t^2-1} - \frac{it+1}{i^2t^2-1}  \right] = \frac{1}{2}\left[\frac{it-1-it-1}{-t^2-1}\right] = \frac{1}{2}\left[\frac{2}{t^2+1}\right] = \frac{1}{t^2+1}$
-
+```
 
 ## Zadanie 2
+
 Zmienna losowa $X$ ma rozkład prawdopodobieństwa o funkcji charakterystycznej $\phi$. Wyznaczyć funkcję charakterystyczną zmiennej: $Y = aX+b$, gdzie $a$, $b$ są dowolnymi liczbami rzeczywistymi $(a \ne 0)$.
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 $Y = aX + b,$
 
 $\phi_Y(t) = E[e^{it(aX+b)}] = \int\limits_{-\infty}^\infty e^{it(ax+b)} f(x) dx =  \int\limits_{-\infty}^\infty e^{itax+itb} f(x) dx = e^{itb} \int\limits_{-\infty}^\infty e^{itax} f(x) dx = e^{itb}\phi(at)$
+```
 
 ## Zadanie 3
+
 Zmienna losowa $X$ ma rozkład $N(0,1)$, wyznaczyć rozkład zmiennej losowej $Y = X^2$.
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 $f(x)=\frac{1}{\sqrt{2\pi}}\exp(-\frac{x^2}{2}),$
 
@@ -163,9 +167,10 @@ Powyżej skorzystałem z informacji, że całka oznaczona z funkcji Gaussa wynos
 Wynik to funkcja charakterystyczna rozkładu gamma o parametrach $\lambda=2$, $p=\frac{1}{2}$, a rozkład gamma z takimi parametrami to rozkład $\chi^2$ z 1 stopniem swobody. Gęstość takiego rozkładu to:
 
 $f(x) = \frac{1}{\sqrt{2}\Gamma(\frac{1}{2})}x^{-\frac{1}{2}}e^{-\frac{x}{2}},$ dla $x>0$.
-
+```
 
 ## Zadanie 4
+
 Wyznaczyć gęstość prawdopodobieństwa zmiennej losowej $X$, o funkcji charakterystycznej postaci:\
 a) $\phi(t) = \exp(\frac{t^2}{2}),$\
 b)
@@ -180,7 +185,7 @@ d) $\phi(t) = e^{2it},$ \
 e) $\phi(t) = \cos(t),$ \
 f) $\sum\limits_{k=1}(\frac{1}{2})^k\cos(kt).$
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 a)
 
@@ -344,8 +349,10 @@ $p_k = \frac{1}{2}(\frac{1}{2})^k.$
 Szukany rozkład prawdopodobieństwa to:
 
 $P(X = k) = \frac{1}{2}(\frac{1}{2})^{|k|},$ dla $k\in\mathbb{Z}-\{0\}.$
+```
 
 ## Zadanie 5
+
 Wyznaczyć za pomocą funkcji charakterystycznych:\
 a) drugi moment zwykły rozkładu Poissona,\
 b) trzeci moment zwykły rozkładu dwumianowego, \
@@ -353,7 +360,7 @@ c) czwarty moment zwykły rozkładu $N(0, 1)$, \
 d) k-ty moment zwykły rozkładu wykładniczego, o gęstości $f(x) = \frac{1}{\lambda}\exp(-\frac{x}{\lambda})$ dla $x>0$, $\lambda>0$,\
 e) k-ty moment zwykły dwuparametrowego rozkładu gamma o gęstości $f(x) = \frac{a^p}{\Gamma(p)}x^{p-1}e^{-ax}$ dla $x>0$, $a, p >0$.
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 W rozwiązaniach skorzystam z twierdzenia nr I.
 
@@ -458,8 +465,10 @@ $\phi^{(k)}(t) = p(p+1)(p+2) \dots (p+k-1)\left(\frac{i}{a}\right)^k(1-\frac{it}
 $\phi^{(k)}(0) = p(p+1)(p+2) \dots (p+k-1)\left(\frac{i}{a}\right)^k,$
 
 $EX^k = \frac{1}{i^k} \frac{p(p+1)(p+2) \dots (p+k-1)i^k}{a^k} = \frac{p(p+1)(p+2) \dots (p+k-1)}{a^k},$ $k\in\mathbb{N}.$
+```
 
 ## Zadanie 6
+
 Niech $X$ i $Y$ będą niezależnymi zmiennymi losowymi. Dla których spośród poniższych rozkładów zachodzi twierdzenie o dodawaniu? Wyznaczyć rozkład zmiennej losowej $Z = X + Y$.\
 a) Poissona z parametrami $\lambda_1$ i $\lambda_2$, \
 b) wykładniczych z tym samym parametrem $\lambda$, \
@@ -475,7 +484,7 @@ $f(x) = \frac{\lambda_1}{\pi\left[\lambda_1^2 + (x - \mu_1)^2\right]},$
 
 $g(y) = \frac{\lambda_2}{\pi\left[\lambda_2^2 + (y - \mu_2)^2\right]}.$
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 Skorzystam z twierdzenia nr I podpunkt 2: funkcja charakterystyczna sumy dowolnej skończonej liczby niezależnych zmiennych losowych równa się iloczynowi funkcji charakterystycznych tych zmiennych.
 
@@ -502,20 +511,24 @@ d)
 $\phi(t) = \exp(i\mu_1t-\lambda_1|t|)\exp(i\mu_2t-\lambda_2|t|) = \exp[i(\mu_1+\mu_2)t-(\lambda_1+\lambda_2)|t|]$
 
 Zachodzi twierdzenie o dodawaniu dla parametrów $\mu$ i $\lambda$. Zmienna losowa $Z$ pochodzi z rozkładu Cauchy'ego z parametrami $\mu = \mu_1+\mu_2$, $\lambda = \lambda_1+\lambda_2$.
+```
 
 ## Zadanie 7
+
 Zmienna losowa ma rozkład geometryczny. Wyznaczyć rozkład sumy $r$ niezależnych zmiennych losowych o tym samym rozkładzie geometrycznym.
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 $\phi(t) = \left(\frac{pe^{it}}{1-qe^{it}}\right)^r,$
 
 jest to funkcja charakterystyczna ujemnego rozkładu dwumianowego.
+```
 
 ## Zadanie 8
+
 $X_1,...,X_n$ są niezależnymi zmiennymi losowymi o tym samym rozkładzie $N(\mu, \sigma)$. Wyznaczyć rozkład zmiennej losowej $X = \frac{1}{n}\sum\limits_{i=1}^n X_i$.
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 Skorzystam z zadania nr 2 gdzie wyznaczyłem funkcję charakterystyczną zmiennej $Y = aX + b$:
 
@@ -540,19 +553,23 @@ $\phi_X(t) = \phi_Y(\frac{1}{n} t),$
 $\phi_X(t) = \exp\left[ni\mu \frac{1}{n}t - \frac{n\sigma^2\left(\frac{1}{n}t\right)^2}{2}\right] =  \exp\left(i\mu t - \frac{\sigma^2 t^2}{2n}\right).$
 
 Jest to funkcja charakterystyczna zmiennej losowej pochodzącej z rozkładu $N(\mu, \frac{\sigma}{\sqrt{n}})$.
+```
 
 ## Zadanie 9
+
 $X$ i $Y$ są niezależnymi zmiennymi losowymi o rozkładach normalnych: $N(\mu_1, \sigma_1)$, $N(\mu_2, \sigma_2)$. Wyznaczyć rozkład zmiennej losowej $Z=aX+bY$.
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 Ponownie korzystam ze wzoru z zadania nr 2.
 
 $\phi(t) = \exp(i\mu_1at - \frac{\sigma^2a^2t^2}{2})\exp(i\mu_1bt - \frac{\sigma^2b^2t^2}{2}) = \exp\left[it(a\mu_1 + b\mu_2) - \frac{t^2}{2}(a^2\sigma_1^2 + b^2\sigma_2^2)\right],$
 
 Jest to funkcja charakterystyczna zmiennej losowej pochodzącej z rozkładu $N(a\mu_1 + b\mu_2, \sqrt{a^2\sigma_1^2 + b^2\sigma_2^2})$.
+```
 
 ## Zadanie 10
+
 Niech $X$ i $Y$ będą niezależnymi zmiennymi losowymi o tym samym rozkładzie wykładniczym o gęstości:
 
 $$f(x) = \begin{cases}
@@ -562,24 +579,28 @@ e^{-x} & \text{dla } x>0, \\
 
 Wyznaczyć rozkład zmiennej losowej $Z = X - Y.$
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 Korzystam z wzoru z zadania nr 2 oraz z funkcji charakterystycznej rozkłady wykładniczego o parametrze $\lambda = 1$:
 
 $\phi(t) = \frac{1}{1-it}\frac{1}{1+it} = \frac{1}{1+t^2}.$
 
 Jest to funkcja charakterystyczna zmiennej losowej pochodzącej z rozkładu Laplace'a.
+```
 
 ## Zadanie 11
+
 Niech $X$ i $Y$ będą niezależnymi zmiennymi losowymi o jednakowych funkcjach charakterystycznych $\phi(t)$. Wyznaczyć funkcję charakterystyczną zmiennej losowej $Z = X - Y.$
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 $\phi_Z(t) = \phi(t)\phi(-t) = \phi(t)\overline{\phi(t)} = |\phi(t)|^2,$
 
 gdzie $\overline{\phi(t)}$ oznacza liczbę zespoloną sprzężoną z $\phi(-t)$.
+```
 
 ## Zadanie 12
+
 Wyznaczyć funkcję charakterystyczną rozkładu prawdopodobieństwa o gęstości:
 
 $$f(x) = \begin{cases}
@@ -587,7 +608,7 @@ $$f(x) = \begin{cases}
 0                         & \text{dla pozostałych } x.
 \end{cases}$$
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 $\phi(t) = \int\limits_{-2}^2 \left(\frac{1}{2}-\frac{|x|}{4}\right)e^{itx}dx = \int\limits_{-2}^0 \left(\frac{1}{2}+\frac{x}{4}\right)e^{itx}dx +  \int\limits_0^2 \left(\frac{1}{2}-\frac{x}{4}\right)e^{itx}dx$
 
@@ -638,34 +659,41 @@ $= \frac{2 - 2\left(\frac{e^{-2it} + e^{2it}}{2}\right)}{4t^2}$
 $= \frac{2 - 2\cos(2t)}{4t^2} = \frac{1 - \cos(2t)}{2t^2}$
 
 $= \frac{1 - 1 + 2\sin^2(t)}{2t^2} = \frac{\sin^2(t)}{t^2}$
+```
 
 ## Zadanie 13
+
 Zmienna losowa $X$ ma rozkład wykładniczy z parametrem $\lambda > 0$. Jaki rozkład ma zmienna $Y=\lambda X$.
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 $\phi_Y(t) = \phi_X(\lambda t) = \frac{1}{1-i\lambda^2 t}$,
 
 jest to funkcja charakterystyczna rozkładu wykładniczego z parametrem $\lambda^2$.
+```
 
 ## Zadanie 14
+
 Zmienna losowa ma rozkład gamma z parametrami $\lambda, p > 0$. Jaki rozkład ma zmienna $Y = pX$?
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 $\phi_Y(t) = \phi_X(pt) = \frac{1}{(1-i\lambda pt)^p}$,
 
 jest to funkcja charakterystyczna rozkładu gamma z parametrami $\lambda p$, $p$.
+```
 
 ## Zadanie 15
+
 Zmienna losowa ma rozkład Cauchy'ego z parametrami $\lambda>0,\ \mu \in R$.
 
 Jaki rozkład ma zmienna losowa $Y = (X-\mu)/ \lambda?$
 
-Rozwiązanie:
+```{dropdown} Rozwiązanie
 
 $Y = \frac{1}{\lambda}X - \frac{\mu}{\lambda}$
 
 $\phi_Y(t) = \exp(-it\frac{\mu}{\lambda})\phi_X(\frac{1}{\lambda}t) =  \exp(-it\frac{\mu}{\lambda})\exp(it\frac{\mu}{\lambda} - \lambda |\frac{1}{\lambda}t|) = \exp(-|t|)$,
 
 jest to funkcja charakterystyczna rozkładu Cauchy'ego z parametrami $\lambda = 1$, $\mu=0$.
+```

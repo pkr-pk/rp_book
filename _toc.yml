@@ -27,3 +27,6 @@ chapters:
 - file: chapters/zmienne_losowe_ciagle/zmienne_losowe_ciagle
   sections:
   - file: chapters/zmienne_losowe_ciagle/zadania
+- file: chapters/funkcje_charakterystyczne/funkcje_charakterystyczne
+  sections:
+  - file: chapters/funkcje_charakterystyczne/zadania
