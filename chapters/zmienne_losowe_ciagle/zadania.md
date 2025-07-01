@@ -7,14 +7,21 @@ Zmienna losowa $X$ ma rozkład jednostajny na przedziale $[a, b]$. Oblicz $E(X)$
 
 Wartość oczekiwana:
 
-$E(X) = \int\limits_{-\infty}^\infty xf(x)dx = \int\limits_{-\infty}^a x0dx + \int\limits_a^b x\frac{1}{b-a}dx + \int\limits_b^\infty x0dx$
-$= \int\limits_a^b x\frac{1}{b-a}dx = \frac{1}{b-a}\int\limits_a^b xdx = \frac{1}{b-a}\frac{x^2}{2}\bigr|_a^b = \frac{1}{b-a}\frac{b^2 - a^2}{2} = \frac{(b-a)(b+a)}{2(b-a)} = \frac{b+a}{2}.$
+$\begin{aligned}E(X) &= \int\limits_{-\infty}^\infty xf(x)dx = \int\limits_{-\infty}^a x0dx + \int\limits_a^b x\frac{1}{b-a}dx + \int\limits_b^\infty x0dx = \\
+&= \int\limits_a^b x\frac{1}{b-a}dx = \frac{1}{b-a}\int\limits_a^b xdx = \\
+&= \frac{1}{b-a}\frac{x^2}{2}\bigr|_a^b = \frac{1}{b-a}\frac{b^2 - a^2}{2} = \\
+&= \frac{(b-a)(b+a)}{2(b-a)} = \frac{b+a}{2}.\end{aligned}$
 
 Wariancja:
 
-$E(X^2) = \int\limits_{-\infty}^\infty x^2f(x)dx = \int\limits_a^b x^2\frac{1}{b-a}dx = \frac{1}{b-a}\int\limits_a^b x^2dx = \frac{1}{b-a}\frac{x^3}{3}\bigr|_a^b = \frac{1}{b-a}\frac{b^3 - a^3}{3} = \frac{(b-a)(b^2+ab+a^2)}{3(b-a)} = \frac{b^2+ab+a^2}{3}$
+$\begin{aligned}E(X^2) &= \int\limits_{-\infty}^\infty x^2f(x)dx = \int\limits_a^b x^2\frac{1}{b-a}dx = \\
+&= \frac{1}{b-a}\int\limits_a^b x^2dx = \frac{1}{b-a}\frac{x^3}{3}\bigr|_a^b = \\
+&= \frac{1}{b-a}\frac{b^3 - a^3}{3} = \frac{(b-a)(b^2+ab+a^2)}{3(b-a)} = \\
+&= \frac{b^2+ab+a^2}{3}\end{aligned}$
 
-$Var(X) = E(X^2) - [E(X)]^2 = \frac{b^2+ab+a^2}{3} - \left(\frac{b+a}{2}\right)^2 = \frac{4b^2+4ab+4a^2}{12} -\frac{3b^2+6ab+3a^2}{12} = \frac{b^2-2ab+a^2}{12} = \frac{(b-a)^2}{12}.$
+$\begin{aligned}Var(X) &= E(X^2) - [E(X)]^2 = \frac{b^2+ab+a^2}{3} - \left(\frac{b+a}{2}\right)^2 = \\
+&= \frac{4b^2+4ab+4a^2}{12} -\frac{3b^2+6ab+3a^2}{12} = \frac{b^2-2ab+a^2}{12} = \\
+&= \frac{(b-a)^2}{12}.\end{aligned}$
 
 Można obliczyć wariancję z definicji ale wtedy jest dłużej bo jest więcej całek do liczenia.
 
@@ -22,23 +29,23 @@ Obliczę też dystrybuantę:
 
 $\int\limits_a^x \frac{1}{b-a} dt = \frac{1}{b-a}t\bigr|_a^x = \frac{x-a}{b-a}$
 
-$$
+$
 F(x)={\begin{cases}
 0                    & \text{dla } x<a,\\
 {\frac {x-a}{b-a}}   & \text{dla } a\leq x\leq b,\\
 1                    & \text{dla } x>b.
 \end{cases}}
-$$
+$
 ```
 
 ## Zadanie 2
 Czas opóźnienia pociągu (w minutach) na pewnej trasie jest zmienną losową $X$ o gęstości:
 
-$$f(x) =
+$f(x) =
 \begin{cases}
 0 & \text{dla } x \notin [0, 10], \\
 Cx & \text{dla } x \in [0, 10].
-\end{cases}$$
+\end{cases}$
 
 Oblicz:\
 a) stałą $C$,\
@@ -56,11 +63,11 @@ $1 = \int\limits_0^{10}C xdx = C\frac{x^2}{2} \bigr|_0^{10} = C\frac{100-0}{2} =
 
 $C = \frac{1}{50}$
 
-$$f(x) =
+$f(x) =
 \begin{cases}
 0            & \text{dla } x \notin [0, 10], \\
 \frac{x}{50} & \text{dla } x \in [0, 10].
-\end{cases}$$
+\end{cases}$
 
 b)
 
@@ -78,13 +85,13 @@ d)
 
 $\int\limits_0^x \frac{t}{50}dt = \frac{t^2}{100} \bigr|_0^x = \frac{x^2}{100}$
 
-$$
+$
 F(x)=
 \begin{cases}
 0               & \text{dla } x < 0, \\
 \frac{x^2}{100} & \text{dla } x \in [0, 10], \\
 1               & \text{dla } x > 10.
-\end{cases}$$
+\end{cases}$
 
 Poprzedni podpunkt obliczony za pomocą dystrybuanty:
 
@@ -98,20 +105,20 @@ Zmienna losowa $Y$ ma dystrybuantę $F(y) = A + B \cdot arctg(y),$ $y \in (-\inf
 
 Należy skorzystać z własności dystrybuanty:
 
-$$
+$
 \begin{cases}
 0 = \lim\limits_{y\to -\infty}A + B \cdot arctg(y) = A - \frac{\pi}{2}B \\
 1 = \lim\limits_{y\to -\infty}A + B \cdot arctg(y) = A + \frac{\pi}{2}B
-\end{cases}$$
+\end{cases}$
 
 Dodaję stronami:
 
 $1 = 2A$
 
-$$\begin{cases}
+$\begin{cases}
 A = \frac{1}{2} \\
 B = \frac{1}{\pi}
-\end{cases}$$
+\end{cases}$
 ```
 
 ## Zadanie 4
@@ -121,44 +128,26 @@ b) Oblicz prawdopodobieństwo warunkowe, że klient będzie czekał co najmniej 
 
 ```{dropdown} Rozwiązanie
 
-$E(X) =$\
-$=\int\limits_0^\infty x\lambda e^{-\lambda x}dx $\
-$=\lambda\int\limits_0^\infty x \left(\frac{e^{-\lambda x}}{-\lambda}\right)'dx $\
-$=\left. \lambda \left( xe^{-\lambda x} + \frac{1}{\lambda}  \int\limits_0^\infty e^{-\lambda x}dx \right) \right|_0^\infty$\
-$=\left. \lambda \left(xe^{-\lambda x} - \frac{1}{\lambda^2} e^{-\lambda x}\right) \right|_0^\infty$\
-$=\left. \left(\lambda xe^{-\lambda x} - \frac{1}{\lambda} e^{-\lambda x}\right) \right|_0^\infty$
+$\begin{aligned}E(X) &= \int\limits_0^\infty x\lambda e^{-\lambda x}dx = \lambda\int\limits_0^\infty x \left(\frac{e^{-\lambda x}}{-\lambda}\right)'dx = \\
+&= \left. \lambda \left( xe^{-\lambda x} + \frac{1}{\lambda}  \int\limits_0^\infty e^{-\lambda x}dx \right) \right|_0^\infty = \left. \lambda \left(xe^{-\lambda x} - \frac{1}{\lambda^2} e^{-\lambda x}\right) \right|_0^\infty = \\
+&= \left. \left(\lambda xe^{-\lambda x} - \frac{1}{\lambda} e^{-\lambda x}\right) \right|_0^\infty = \lim\limits_{x\to\infty} \left(\lambda xe^{-\lambda x} - \frac{1}{\lambda} e^{-\lambda x}\right) - \frac{1}{-\lambda} = \\
+&=\lim\limits_{x\to\infty} \left(\lambda \frac{x}{e^{\lambda x}} - \frac{1}{\lambda} \frac{1}{e^{\lambda x}} \right) + \frac{1}{\lambda} = \lim\limits_{x\to\infty} \left(\lambda \frac{(x)'}{\left(e^{\lambda x}\right)'} - \frac{1}{\lambda} \frac{1}{e^{\lambda x}} \right) + \frac{1}{\lambda} = \\
+&= \lim\limits_{x\to\infty} \left(\lambda \frac{1}{\lambda e^{\lambda x}} - \frac{1}{\lambda} \frac{1}{e^{\lambda x}} \right) + \frac{1}{\lambda} = 0 - 0 + \frac{1}{\lambda} = \\
+&= \frac{1}{\lambda}\end{aligned}$
 
-$=\lim\limits_{x\to\infty} \left(\lambda xe^{-\lambda x} - \frac{1}{\lambda} e^{-\lambda x}\right) - \frac{1}{-\lambda}$\
-$=\lim\limits_{x\to\infty} \left(\lambda \frac{x}{e^{\lambda x}} - \frac{1}{\lambda} \frac{1}{e^{\lambda x}} \right) + \frac{1}{\lambda}$\
-$=\lim\limits_{x\to\infty} \left(\lambda \frac{(x)'}{\left(e^{\lambda x}\right)'} - \frac{1}{\lambda} \frac{1}{e^{\lambda x}} \right) + \frac{1}{\lambda}$\
-$=\lim\limits_{x\to\infty} \left(\lambda \frac{1}{\lambda e^{\lambda x}} - \frac{1}{\lambda} \frac{1}{e^{\lambda x}} \right) + \frac{1}{\lambda}$\
-$=0 - 0 + \frac{1}{\lambda} = \frac{1}{\lambda}$
-
-<br />
-
-$E(X^2) =$\
-$=\int\limits_0^\infty x^2 \lambda e^{-\lambda x}dx$\
-$=\lambda \int\limits_0^\infty x^2 \left(\frac{e^{-\lambda x}}{-\lambda}\right)'dx$\
-$=\left. \lambda \left( x^2e^{-\lambda x} + \frac{2}{\lambda} \int\limits_0^\infty x e^{-\lambda x}dx \right) \right|_0^\infty$\
-$=\left. \lambda \left[ x^2e^{-\lambda x} + \frac{2}{\lambda} \int\limits_0^\infty x \left(\frac{e^{-\lambda x}}{-\lambda}\right)'dx \right] \right|_0^\infty$\
-$=\left. \lambda \left[ x^2e^{-\lambda x} + \frac{2}{\lambda}\left( xe^{\lambda x} + \frac{1}{\lambda} \int\limits_0^\infty e^{-\lambda x}dx \right) \right] \right|_0^\infty$
-
-$=\lambda \left. \left[ x^2e^{-\lambda x} + \frac{2}{\lambda}\left( xe^{\lambda x} - \frac{1}{\lambda^2} e^{-\lambda x} \right) \right] \right|_0^\infty$
-
-$=\left. \left[ \lambda x^2e^{-\lambda x} + 2 \left( xe^{\lambda x} - \frac{1}{\lambda^2} e^{-\lambda x} \right) \right] \right|_0^\infty$
-
-$=\left. \left( \lambda x^2e^{-\lambda x} + 2xe^{\lambda x} - \frac{2}{\lambda^2} e^{-\lambda x} \right) \right|_0^\infty$
-
-$=\lim_{x\to\infty} \left( \lambda x^2e^{-\lambda x} + 2xe^{\lambda x} - \frac{2}{\lambda^2} e^{-\lambda x} \right) - \left(-\frac{2}{\lambda^2}\right)$\
-$=\lim_{x\to\infty} \left( \lambda \frac{(x^2)''}{(e^{\lambda x})''} + 2\frac{(x)'}{(e^{\lambda x})'} - \frac{2}{\lambda^2} \frac{1}{e^{\lambda x}} \right) + \frac{2}{\lambda^2}$\
-$=\lim_{x\to\infty} \left( \lambda \frac{2}{\lambda^2e^{\lambda x}} + 2\frac{1}{\lambda e^{\lambda x}} - \frac{2}{\lambda^2} \frac{1}{e^{\lambda x}}  \right) + \frac{2}{\lambda^2} $\
-$=0 + 0 - 0 + \frac{2}{\lambda^2} = \frac{2}{\lambda^2}$
-
-<br />
+$\begin{aligned}E(X^2) &= \int\limits_0^\infty x^2 \lambda e^{-\lambda x}dx = \lambda \int\limits_0^\infty x^2 \left(\frac{e^{-\lambda x}}{-\lambda}\right)'dx = \\
+&= \left. \lambda \left( x^2e^{-\lambda x} + \frac{2}{\lambda} \int\limits_0^\infty x e^{-\lambda x}dx \right) \right|_0^\infty = \\
+&= \left. \lambda \left[ x^2e^{-\lambda x} + \frac{2}{\lambda} \int\limits_0^\infty x \left(\frac{e^{-\lambda x}}{-\lambda}\right)'dx \right] \right|_0^\infty = \\
+&= \left. \lambda \left[ x^2e^{-\lambda x} + \frac{2}{\lambda}\left( xe^{\lambda x} + \frac{1}{\lambda} \int\limits_0^\infty e^{-\lambda x}dx \right) \right] \right|_0^\infty = \\
+&= \lambda \left. \left[ x^2e^{-\lambda x} + \frac{2}{\lambda}\left( xe^{\lambda x} - \frac{1}{\lambda^2} e^{-\lambda x} \right) \right] \right|_0^\infty = \\
+&=  \left. \left[ \lambda x^2e^{-\lambda x} + 2 \left( xe^{\lambda x} - \frac{1}{\lambda^2} e^{-\lambda x} \right) \right] \right|_0^\infty = \\
+&= \left. \left( \lambda x^2e^{-\lambda x} + 2xe^{\lambda x} - \frac{2}{\lambda^2} e^{-\lambda x} \right) \right|_0^\infty = \\
+&= \lim_{x\to\infty} \left( \lambda x^2e^{-\lambda x} + 2xe^{\lambda x} - \frac{2}{\lambda^2} e^{-\lambda x} \right) - \left(-\frac{2}{\lambda^2}\right) = \\
+&= \lim_{x\to\infty} \left( \lambda \frac{(x^2)''}{(e^{\lambda x})''} + 2\frac{(x)'}{(e^{\lambda x})'} - \frac{2}{\lambda^2} \frac{1}{e^{\lambda x}} \right) + \frac{2}{\lambda^2} = \\
+&= \lim_{x\to\infty} \left( \lambda \frac{2}{\lambda^2e^{\lambda x}} + 2\frac{1}{\lambda e^{\lambda x}} - \frac{2}{\lambda^2} \frac{1}{e^{\lambda x}}  \right) + \frac{2}{\lambda^2} = \\
+&= 0 + 0 - 0 + \frac{2}{\lambda^2} = \frac{2}{\lambda^2}\end{aligned}$
 
 $Var(X) = \frac{2}{\lambda^2} - \left( \frac{1}{\lambda} \right)^2 = \frac{2}{\lambda^2} - \frac{1}{\lambda^2} = \frac{1}{\lambda^2}$
-
-<br />
 
 Dla danych z zadania:
 
@@ -172,13 +161,13 @@ Obliczę też dystrybuantę:
 
 $\int\limits_0^x \lambda e^{-\lambda t}dt = -e^{-\lambda t}\bigr|_0^x = 1-e^{-\lambda x},$
 
-$$
+$
 F(x) = 
 \begin{cases}
 1-e^{-\lambda x} & x \ge 0, \\
 0                & x < 0.
 \end{cases}
-$$
+$
 
 b)
 
@@ -194,20 +183,22 @@ $P(Y>y+h|Y>y) = P(Y>h)$, dla dowolnego $y$ i $h>0$.
 
 ```{dropdown} Rozwiązanie
 
-$P(Y>y+h|Y>y) = \frac{P(Y>y+h \ \cap \ Y>y)}{P(Y>y)} = \frac{P(Y>y+h)}{P(Y>y)}$ 
-$= \frac{1-P(Y\le y+h)}{1-P(Y\le y)} = \frac{1-1+e^{-\lambda(y+h)}}{1-1+e^{-\lambda y}}$
-$= e^{-\lambda h} = 1 - \left( 1 - e^{-\lambda h} \right) = 1 - P(Y \le h) = P(Y > h).$
+$\begin{aligned}P(Y>y+h|Y>y) &= \frac{P(Y>y+h \cap Y>y)}{P(Y>y)} = \frac{P(Y>y+h)}{P(Y>y)} = \\ 
+&= \frac{1-P(Y\le y+h)}{1-P(Y\le y)} = \frac{1-1+e^{-\lambda(y+h)}}{1-1+e^{-\lambda y}} = \\
+&= e^{-\lambda h} = 1 - \left( 1 - e^{-\lambda h} \right) = \\
+&= 1 - P(Y \le h) = \\
+&= P(Y > h).\end{aligned}$
 ```
 
 ## Zadanie 6
 Zmienna losowa $X$ ma dystrybuantę postaci:
 
-$$F(x)=
+$F(x)=
 \begin{cases}
 0              & \text{dla } x<0, \\
 C              & \text{dla } x=0, \\
 1 - 0.5e^{-3x} & \text{dla } x<0.
-\end{cases}$$
+\end{cases}$
 
 a) Znajdź stałą $C$.\
 b) Znajdź dystrybuantę warunkową $P(X \le x |X>0), \ x\in (-\infty, \infty)$.\
@@ -225,18 +216,20 @@ b)
 
 Dla $x \ge 0$:
 
-$P(X \le x |X > 0) = \frac{P(X \le x \ \cap \ X > 0)}{P(X > 0)} = \frac{P(0 < X \le x)}{P(X > 0)} = \frac{P(X\le x) - P(X\le0)}{1-P(X\le0)} = \frac{1 - 0.5e^{-3x} - \frac{1}{2}}{1 - \frac{1}{2}}= 1-e^{-3x}.$
+$\begin{aligned}P(X \le x |X > 0) &= \frac{P(X \le x \cap X > 0)}{P(X > 0)} = \frac{P(0 < X \le x)}{P(X > 0)} = \\
+&= \frac{P(X\le x) - P(X\le0)}{1-P(X\le0)} = \frac{1 - 0.5e^{-3x} - \frac{1}{2}}{1 - \frac{1}{2}} = \\
+&= 1-e^{-3x}.\end{aligned}$
 
 Dla $x < 0$
 
-$P(X \le x |X > 0) = \frac{P(X\le x \ \cap \ X > 0)}{P(X > 0)} = \frac{\emptyset}{P(X > 0)}=0.$
+$P(X \le x |X > 0) = \frac{P(X\le x \cap X > 0)}{P(X > 0)} = \frac{\emptyset}{P(X > 0)}=0.$
 
-$$
+$
 P(X \le x |X > 0) = 
 \begin{cases}
 0         & \text{dla } x<0, \\
 1-e^{-3x} & \text{dla } x \ge 0.
-\end{cases}$$
+\end{cases}$
 
 c)
 
@@ -245,12 +238,12 @@ $E(X|X>0) = E(X)$,
 
 Wyznaczam gęstość $X$ (pochodną dystrybuanty):
 
-$$
+$
 f(x) = 
 \begin{cases}
 0          & \text{dla } x\le0, \\
 1.5e^{-3x} & \text{dla } x > 0.
-\end{cases}$$
+\end{cases}$
 
 $E(X) = \int\limits_0^\infty 1.5xe^{-3x}$
 
@@ -284,7 +277,8 @@ $Var(Y) = Var(0.9X-20) = 0.9^2Var(X) = 0.9^2\cdot 100 = 81$
 
 b)
 
-$P(Y > 50) = P(0.9X-20 > 50) = P(X > \frac{50+20}{0.9}) \approx P(X > 77.78) = 1-P(X \le 77.78)$
+$\begin{aligned}P(Y > 50) &= P(0.9X-20 > 50) = P(X > \frac{50+20}{0.9}) \approx \\
+&\approx P(X > 77.78) = 1-P(X \le 77.78)\end{aligned}$
 
 Można też ustandaryzować rozkład:
 
@@ -319,22 +313,22 @@ b) Znajdź gęstość zmiennej $Y$.
 
 Gęstość rozkładu wykładniczego:
 
-$$
+$
 f(x; \lambda) =
 \begin{cases}
 \lambda e^{-\lambda x} & x \ge 0, \\
 0                      & x < 0.
-\end{cases}$$
+\end{cases}$
 
 Dystrybuanta:
 
-$$
+$
 F(x;\lambda) = 
 \begin{cases}
 1-e^{-\lambda x} & x \ge 0, \\
 0                & x < 0.
 \end{cases}
-$$
+$
 
 a)
 
@@ -369,12 +363,12 @@ print(1 + st.norm.cdf(0, 3, 5) - st.norm.cdf(2,3,5))
 ## Zadanie 10
 Zmienna losowa $X$ ma gęstość określoną wzorem:
 
-$$
+$
 f(x) =
 \begin{cases}
 3e^{3x} & x < 0, \\
 0       & x \ge 0.
-\end{cases}$$
+\end{cases}$
 
 Znajdź gęstość i dystrybuantę zmiennej losowej $Y = X^3+2$.
 
@@ -402,10 +396,10 @@ c) Oblicz $P(|Z|<1)$.
 
 a)
 
-$$\begin{cases}
+$\begin{cases}
 |z| = z  & \text{dla } z \ge 0,\\
 |z| = -z & \text{dla } z < 0,
-\end{cases}$$
+\end{cases}$
 
 Dla $z < 0$:
 
@@ -417,10 +411,10 @@ $0.5e^0 + \int\limits_0^t 0.5e^{-z}dz = 1-0.5e^{-t}$
 
 Ostatecznie:
 
-$$F_Z(t) = \begin{cases}
+$F_Z(t) = \begin{cases}
 0.5e^t      & \text{dla } t < 0, \\
 1-0.5e^{-t} & \text{dla } t \ge 0.
-\end{cases}$$
+\end{cases}$
 
 b)
 
@@ -440,7 +434,8 @@ print("Wartosc oczekiwana:", result)
 
 c)
 
-$P(|Z| < 1) = P(-1 < Z < 1) = P(Z < 1)-P(Z < -1) = 1-0.5e^{-1}-0.5e^{-1} \approx 0.63$
+$\begin{aligned}P(|Z| < 1) &= P(-1 < Z < 1) = P(Z < 1)-P(Z < -1) = \\
+&= 1-0.5e^{-1}-0.5e^{-1} \approx 0.63\end{aligned}$
 ````
 
 ## Zadanie 12
@@ -452,15 +447,18 @@ b) Wyznacz dystrybuantę $F_Y$ zmiennej losowej $Y$.
 
 a)
 
-$P(Y < 2) = P(\min(X,2) + 1 < 2) = P(\min(X,2) < 1) = 1 - P(\min(X,2) \ge 1)$
-$= 1 - P(X \ge 1, 2 \ge 1) = 1 - (1 - P(X < 1)) = P(X < 1) = 1 - e^{-0.2} = 0.181.$
+$\begin{aligned}P(Y < 2) &= P(\min(X,2) + 1 < 2) = P(\min(X,2) < 1) = \\
+&= 1 - P(\min(X,2) \ge 1) = 1 - P(X \ge 1, 2 \ge 1) = \\
+&= 1 - (1 - P(X < 1)) = P(X < 1) = \\
+&= 1 - e^{-0.2} = 0.181.\end{aligned}$
 
-$P(Y>3) = P(\min(X,2) + 1 > 3) = P(\min(X,2) > 2) = P(X > 2, 2 > 2) = 0$, bo $P(2>2) = 0.$
+$\begin{aligned}P(Y>3) &= P(\min(X,2) + 1 > 3) = P(\min(X,2) > 2) = \\
+&= P(X > 2, 2 > 2) = 0, \text{ bo } P(2>2) = 0.\end{aligned}$
 
 b)
 
-$P(Y \le t) = P(\min(X,2) + 1 \le t) = P(\min(X,2) \le t - 1) = 1 - P(\min(X,2) > t - 1)$
-$= 1 - P(X>t-1, t<3).$
+$\begin{aligned}P(Y \le t) &= P(\min(X,2) + 1 \le t) = P(\min(X,2) \le t - 1) = \\
+&= 1 - P(\min(X,2) > t - 1) = 1 - P(X>t-1, t<3).\end{aligned}$
 
 Dla $t<3$:
 
@@ -472,12 +470,12 @@ $1 - P(X>t-1, t<3) = 1.$
 
 Szukana dystrybuanta:
 
-$$F_Y(t)=
+$F_Y(t)=
 \begin{cases}
 0               & \text{dla } t<1, \\
 1-e^{-0.2(t-1)} & \text{dla } t \in [1, 3), \\
 1               & \text{dla } t\ge 3.
-\end{cases}$$
+\end{cases}$
 ```
 
 ## Zadanie 13
@@ -487,30 +485,30 @@ Zmienna losowa $X$ ma rozkład jednostajny $U(0,1)$. Niech $Y=2X+3$. Znajdź gę
 
 $P(Y \le t) = P(2X+3) = P(X \le \frac{t-3}{2}) = F_X(\frac{t-3}{2}) = \frac{\frac{t-3}{2}-0}{1-0} = \frac{t-3}{2}$
 
-$$F_Y(t)=
+$F_Y(t)=
 \begin{cases}
 0             & \text{dla } t<3, \\
 \frac{t-3}{2} & \text{dla } t \in [3, 5), \\
 1             & \text{dla } t \ge 5.
-\end{cases}$$
+\end{cases}$
 
 Obliczam pochodną dystrybuanty aby otrzymać gęstość:
 
-$$f_Y(t)=
+$f_Y(t)=
 \begin{cases}
 0           & \text{dla } t \notin [3, 5], \\
 \frac{1}{2} & \text{dla } t \in [3, 5], \\
-\end{cases}$$
+\end{cases}$
 ```
 
 ## Zadanie 14
 Gęstością zmiennej losowej $T$ jest funkcja:
 
-$$f_T(t)=
+$f_T(t)=
 \begin{cases}
 0  & \text{dla } t \notin (0, 1), \\
 2t & \text{dla } t \in (0, 1), \\
-\end{cases}$$
+\end{cases}$
 
 Zmienna losowa $X$ określona jest wzorem $X = -T^3 + 1$.\
 a) Znajdź gęstość $f_X$ zmiennej losowej $X$.\
@@ -524,31 +522,33 @@ Na początku należy znaleźć dystrybuantę zmiennej losowej $T$:
 
 $P(T \le x) = \int\limits_0^x 2t dt = x^2$
 
-$$F_T(x)=
+$F_T(x)=
 \begin{cases}
 0   & \text{dla } x < 0, \\
 x^2 & \text{dla } t \in [0, 1), \\
 1   & \text{dla } t \ge 1.
-\end{cases}$$
+\end{cases}$
 
 Szukam dystrybuanty zmiennej $X$:
 
-$P(X \le t) = P(-T^3 + 1 \le t) = P(T > (1-t)^\frac{1}{3}) = 1 - P(T \le (1-t)^\frac{1}{3}) = 1 - F_T((1-t)^\frac{1}{3}) = 1 - (1-t)^\frac{2}{3}$
+$\begin{aligned}P(X \le t) &= P(-T^3 + 1 \le t) = P(T > (1-t)^\frac{1}{3}) = \\
+&= 1 - P(T \le (1-t)^\frac{1}{3}) = 1 - F_T((1-t)^\frac{1}{3}) = \\
+&= 1 - (1-t)^\frac{2}{3}\end{aligned}$
 
-$$F_X(t)=
+$F_X(t)=
 \begin{cases}
 0                     & \text{dla } t < 0, \\
 1 - (1-t)^\frac{2}{3} & \text{dla } t \in [0, 1), \\
 1                     & \text{dla } t \ge 1.
-\end{cases}$$
+\end{cases}$
 
 Gęstość to pochodna dystrybuanty:
 
-$$f_X(t)=
+$f_X(t)=
 \begin{cases}
 0                               & \text{dla } t \notin (0, 1), \\
 \frac{2}{3}(1-t)^{-\frac{1}{3}} & \text{dla } t \in (0, 1), \\
-\end{cases}$$
+\end{cases}$
 ```
 
 ## Zadanie 15
@@ -580,8 +580,9 @@ $1 = E(X^2) - 25,$
 
 $E(X^2) = 26.$
 
-$0 = E[(X-5)^3] = E(X^3 - 15X^2 + 75X - 125) = E(X^3) - 15E(X^2) + 75E(X) - 125$
-$ = E(X^3) - 390 + 375 - 125,$
+$\begin{aligned}0 &= E[(X-5)^3] = E(X^3 - 15X^2 + 75X - 125) = \\
+&= E(X^3) - 15E(X^2) + 75E(X) - 125 = \\
+&= E(X^3) - 390 + 375 - 125,\end{aligned}$
 
 $E(X^3) = 140.$
 
@@ -593,8 +594,12 @@ Zmienna losowa $X$ ma momenty zwykłe: $m_1 = 2$, $m_2 = 3$, $m_3 = 4$. Oblicz t
 
 ```{dropdown} Rozwiązanie
 
-$\mu_3 = E[X^3 - 3X^2m_1 + 3Xm_1^2 - m_1^3] = E(X^3) - 3m_1E(X^2) + 3m_1^2E(X) - m_1^3$
-$ = m_3 - 3m_1m_2 + 3m_1^3 - m_1^3 = m_3 - 3m_1m_2 + 2m_1^3 = 4 - 3\cdot2\cdot3+2\cdot8 = 2$
+$\begin{aligned}\mu_3 &= E[X^3 - 3X^2m_1 + 3Xm_1^2 - m_1^3] = \\
+&= E(X^3) - 3m_1E(X^2) + 3m_1^2E(X) - m_1^3 = \\
+&= m_3 - 3m_1m_2 + 3m_1^3 - m_1^3 = \\
+&= m_3 - 3m_1m_2 + 2m_1^3 = \\
+&= 4 - 3\cdot2\cdot3+2\cdot8 = \\
+&= 2\end{aligned}$
 ```
 
 ## Zadanie 17
@@ -734,31 +739,18 @@ Wyznacz dystrybuantę rozkładu Cauchy'ego.
 
 ```{dropdown} Rozwiązanie
 
-$$
-P(X \le t) = \int\limits_{-\infty}^t \frac{a}{\pi(a^2+(x-m)^2)}dx =
-\frac{a}{\pi} \int\limits_{-\infty}^t \frac{1}{(a^2+(x-m)^2)}dx$$
-
-$$
-=\left|\begin{aligned} 
+$\begin{aligned}P(X \le t) &= \int\limits_{-\infty}^t \frac{a}{\pi(a^2+(x-m)^2)}dx = \frac{a}{\pi} \int\limits_{-\infty}^t \frac{1}{(a^2+(x-m)^2)}dx = \\
+&= \left|\begin{aligned} 
 p = x - m \\ 
 dp = dx
-\end{aligned} \right| =
-\frac{a}{\pi} \int\limits_{-\infty}^{t-m} \frac{1}{a^2+p^2}dp
-$$
-
-$$
-=\left|\begin{aligned} 
+\end{aligned} \right| = \frac{a}{\pi} \int\limits_{-\infty}^{t-m} \frac{1}{a^2+p^2}dp = \\
+&= \left|\begin{aligned} 
 ay = p \\
 y = \frac{p}{a} \\ 
 ady = dp
-\end{aligned} \right| =
-\frac{a}{\pi} \int\limits_{-\infty}^{\frac{t-m}{a}} \frac{a}{a^2(1+y^2)}dp
-$$
-
-$$
-=\frac{1}{\pi} \int\limits_{-\infty}^{\frac{t-m}{a}} \frac{1}{1+y^2}dp =
-\left. \frac{1}{\pi}arctg(y)\right|_{-\infty}^{\frac{t-m}{a}} = \frac{1}{\pi}arctg(\frac{t-m}{a}) + \frac{1}{2},
-$$
+\end{aligned} \right| = \frac{a}{\pi} \int\limits_{-\infty}^{\frac{t-m}{a}} \frac{a}{a^2(1+y^2)}dp = \\
+&= \frac{1}{\pi} \int\limits_{-\infty}^{\frac{t-m}{a}} \frac{1}{1+y^2}dp = \left. \frac{1}{\pi}arctg(y)\right|_{-\infty}^{\frac{t-m}{a}} = \\
+&= \frac{1}{\pi}arctg(\frac{t-m}{a}) + \frac{1}{2},\end{aligned}$
 
 dla $a > 0, \ m\in R.$
 ```
@@ -795,12 +787,12 @@ c)
 
 $P(W \le t) = P(F(X) \le t) = P(X \le F^{-1}(t)) = F(F^{-1}(t)) = t,$
 
-$$F_W(t)=
+$F_W(t)=
 \begin{cases}
 0 & t < 0. \\
 t & t \in [0, 1), \\
 1 & t \ge 1. 
-\end{cases}$$
+\end{cases}$
 ```
 
 ## Zadanie 26
