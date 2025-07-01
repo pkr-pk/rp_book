@@ -1,9 +1,11 @@
 # Zmienne losowe ciągłe
 
 <h3>Zmienna losowa ciągła</h3>
+
 W skrócie jest to funkcja, która przypisuje liczby zdarzeniom elementarnym. Zmienna losowa jest określona na przestrzeni zdarzeń elementarnych a jej wartości są ze zbioru liczb rzeczywistych. Zmienna losowa jest ciągła jeśli jej zbiór wartości jest ciągły.
 
 <h3>Rozkład prawdopodobieństwa</h3>
+
 Jest to miara probabilistyczna (nie będę wnikał co to jest) przypisująca prawdopodobieństwa zbiorom wartości danej zmiennej, odpowiadającym zdarzeniom elementarnym.
 
 Dla zmiennej losowej ciągłej wprowadzamy funkcję gęstości prawdopodobieństwa. Jest to funkcja określona na zbiorze liczb rzeczywistych posiadająca następujące własności:
@@ -21,6 +23,7 @@ Dla zmiennej losowej ciągłej wprowadzamy funkcję gęstości prawdopodobieńst
     $$P(-\infty < X \le +\infty) = \int\limits_{-\infty}^{+\infty} f(x) dx = 1 $$
 
 <h3>Dystrybuanta</h3>
+
 Dystrybuantą zmiennej losowej $X$ nazywamy funkcję $F(x)$ określoną na zbiorze liczb rzeczywistych jako: 
 
 $$F(x) = P(X \le x)$$
@@ -30,13 +33,15 @@ Dla zmiennej ciągłej z funkcją gęstości prawdopodobieństwa $f$:
 $$F(x) = P(X \le x)= \int\limits_{-\infty}^x f(s) ds $$
 
 <h3>Własności dystrybuanty</h3>
+
 * $0 \le F(x) \le 1,$
-* $F(x_1) \le F(x_2) \text{ dla $x_1 \le x_2$},$
+* $F(x_1) \le F(x_2) \text{ dla } x_1 \le x_2,$
 * $\lim\limits_{x \to -\infty} F(x) = 0,$
 * $\lim\limits_{x \to \infty} F(x) = 1,$
 * $F$ jest prawostronnie ciągła.
 
 <h3>Wartość oczekiwana</h3>
+
 Wartość oczekiwana zmiennej losowej $X$ określona jest wzorem:
 
 $$E(X) = \int\limits_{-\infty}^\infty xf(x)dx.$$
@@ -47,6 +52,7 @@ $$E(X^i) = \int\limits_{-\infty}^\infty x^if(x)dx.$$
 
 
 <h3>Własności wartości oczekiwanej</h3>
+
 * $E(c) = c,$
 * $E(aX+b) = aE(X) + b,$
 * $E(X + Y) = E(X) + E(Y),$
@@ -80,6 +86,7 @@ $$f_X(x|y) = \frac{f_{X,Y}(x, y)}{f_Y(y)},$$
 $f_Y(y)$ - jest to gęstość zmiennej $Y$.
 
 <h3>Wariancja</h3>
+
 Wariancja zmiennej losowej $X$ określona jest wzorem:
 
 $$Var(X) = \int\limits_{-\infty}^\infty [x - E(X)]^2 f(x)dx,$$
@@ -98,6 +105,7 @@ $$D(X) = \sqrt{Var(X)}.$$
 Odchylenie standardowe to nie pierwszy moment centralny.
 
 <h3>Własności wariancji</h3>
+
 * $Var(X)=E(X^2)-[E(X)]^2,$
 * $Var(c)=0,$
 * $Var(a\cdot X)=a^2\cdot Var(X),$
@@ -110,6 +118,7 @@ Odchylenie standardowe to nie pierwszy moment centralny.
 $$Var(X|Y) = E(X^2|Y)-[E(X|Y)]^2 = E[(X-\mu_{X|Y})^2|Y]$$
 
 <h3>Mediana</h3>
+
 Kwantylem rzędu $p$, gdzie $0\le p\le 1$, w rozkładzie empirycznym $P_{X}$ zmiennej losowej $X$ nazywamy taką wartość $x_{p}$ zmiennej losowej $X$  dla której spełnione są nierówności:
 
 $P_{X}((-\infty, x_{p}]) \ge p$
@@ -121,6 +130,7 @@ $P_{X}([x_{p}, \infty)) \ge 1 - p.$
 Kwantyl rzędu $\frac{1}{2}$ to inaczej mediana.
 
 <h3>Dominanta</h3>
+
 Dominanta to statystyka dla zmiennych o rozkładzie dyskretnym, wskazująca na wartość o największym prawdopodobieństwie wystąpienia.
 
 <h3>Współczynnik zmienności</h3>
@@ -132,11 +142,13 @@ $$v = \frac{D(X)}{E(X)}.$$
 $$A = \frac{\mu_3}{D^3(X)}.$$
 
 <h3>Twierdzenie 1</h3>
+
 Jeżeli $X = h(Y)$ to zmienna losowa $Y$ ma gęstość:
 
 $$f_Y(y) = f_X(h(y))\cdot |h'(y)|.$$
 
 <h3>Rozkład jednostajny</h3>
+
 Ciągły rozkład prawdopodobieństwa, dla którego gęstość prawdopodobieństwa w przedziale od $a$ do $b$ jest stała i różna od zera, a poza nim równa zeru.
 
 Funkcja rozkładu prawdopodobieństwa:
@@ -168,6 +180,7 @@ Wariancja:
 $$Var(X) = \frac{(a-b)^2}{12}.$$
 
 <h3>Rozkład wykładniczy</h3>
+
 Funkcja rozkładu prawdopodobieństwa:
 
 $$
@@ -196,6 +209,7 @@ Wariancja:
 $$Var(X) = \frac{1}{\lambda^2}.$$
 
 <h3>Rozkład normalny</h3>
+
 Funkcja rozkładu prawdopodobieństwa:
 
 $$f_{\mu ,\sigma }(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}\,\exp \left({\frac {-(x-\mu )^{2}}{2\sigma ^{2}}}\right).$$
@@ -213,6 +227,7 @@ Funkcja tworząca momenty:
 $$M_{X}(t)=\exp \left(\mu \,t+{\frac {\sigma ^{2}t^{2}}{2}}\right)$$
 
 <h3>Rozkład gamma</h3>
+
 Funkcja rozkładu prawdopodobieństwa:
 
 $${\begin{aligned}f(x;\alpha ,\beta )&={\frac {\beta ^{\alpha }x^{\alpha -1}e^{-\beta x}}{\Gamma (\alpha )}}\quad {\text{ dla }}x>0\quad \alpha ,\beta >0, \end{aligned}}$$
