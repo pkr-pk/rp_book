@@ -44,7 +44,9 @@ a) $P(A) = \frac{1}{3} \cdot \frac{3}{7} \cdot \frac{2}{6} + \frac{2}{3} \cdot \
 
 b) $P(A) = \frac{1}{3} \cdot \frac{4}{7} \cdot \frac{3}{6} + \frac{1}{3} \cdot \frac{3}{7} \cdot \frac{4}{6} + \frac{2}{3} \cdot \frac{5}{9} \cdot \frac{4}{8} + \frac{2}{3} \cdot \frac{4}{9} \cdot \frac{5}{8} \approx 0.56$
 
-c) $P(A) = \frac{1}{3} \cdot \frac{4}{7} \cdot \frac{3}{6} + \frac{1}{3} \cdot \frac{4}{7} \cdot \frac{3}{6} + \frac{1}{3} \cdot \frac{3}{7} \cdot \frac{4}{6} + \frac{2}{3} \cdot \frac{5}{9} \cdot \frac{4}{8} + \frac{2}{3} \cdot \frac{5}{9} \cdot \frac{4}{8} + \frac{2}{3} \cdot \frac{4}{9} \cdot \frac{5}{8} \approx 0.84$
+c) $P(A) = \frac{1}{3} \cdot \frac{4}{7} \cdot \frac{3}{6} + \frac{1}{3} \cdot \frac{4}{7} \cdot \frac{3}{6} + \frac{1}{3} \cdot \frac{3}{7} \cdot \frac{4}{6} + \frac{2}{3} \cdot \frac{5}{9} \cdot \frac{4}{8} + $
+
+$+ \frac{2}{3} \cdot \frac{5}{9} \cdot \frac{4}{8} + \frac{2}{3} \cdot \frac{4}{9} \cdot \frac{5}{8} \approx 0.84$
 ```
 
 ## Zadanie 3
@@ -94,7 +96,9 @@ $P(A|B_1) = 0.1$\
 $P(A|B_2) = 0.05$\
 $P(A|B_3) = 0.1$
 
-$P(A)=P(A|B_1)⋅P(B_1) + P(A|B_2)⋅P(B_2)+ P(A|B_3)⋅P(B_3) = 0.1 \cdot 0.3 + 0.05 \cdot 0.4 + 0.1 \cdot 0.3 = 0.08$
+$\begin{aligned}P(A) &= P(A|B_1)⋅P(B_1) + P(A|B_2)⋅P(B_2)+ P(A|B_3)⋅P(B_3) = \\
+&= 0.1 \cdot 0.3 + 0.05 \cdot 0.4 + 0.1 \cdot 0.3 = \\
+&= 0.08\end{aligned}$
 
 b) Należy skorzystać z wzoru Bayesa i obliczyć $P(B_1 | A)$:
 

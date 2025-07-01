@@ -147,22 +147,16 @@ Zmienna losowa $X$ ma rozkład $N(0,1)$, wyznaczyć rozkład zmiennej losowej $Y
 
 $f(x)=\frac{1}{\sqrt{2\pi}}\exp(-\frac{x^2}{2}),$
 
-$$
-\begin{aligned}
+$\begin{aligned}
 \phi(t) &= E[\exp(itX^2)] = 
 \int\limits_{-\infty}^\infty \exp(itx^2) \frac{1}{\sqrt{2\pi}}\exp(-\frac{x^2}{2})dx = \\
-
 &= \frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^\infty \exp(itx^2-\frac{x^2}{2})dx=
 \frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^\infty \exp(-\frac{(x\sqrt{1-2it})^2}{2})dx= \\
-
 &= \left|\begin{aligned} y = x\sqrt{1-2it} \\ dy = \sqrt{1-2it}dx \end{aligned}\right|=
 \frac{1}{\sqrt{2\pi} \sqrt{1-2it}}\int\limits_{-\infty}^\infty \exp(-\frac{y^2}{2})dy = \\
-
 &= \frac{1}{\sqrt{2\pi} \sqrt{1-2it}} \sqrt{2\pi} = \\
-
 &= \left(\frac{1}{1-2it}\right)^{\frac{1}{2}}
-\end{aligned}
-$$
+\end{aligned}$
 
 Powyżej skorzystałem z informacji, że całka oznaczona z funkcji Gaussa wynosi $\sqrt{2\pi}$.
 
@@ -174,14 +168,11 @@ $f(x) = \frac{1}{\sqrt{2}\Gamma(\frac{1}{2})}x^{-\frac{1}{2}}e^{-\frac{x}{2}},$ 
 ## Zadanie 4
 
 Wyznaczyć gęstość prawdopodobieństwa zmiennej losowej $X$, o funkcji charakterystycznej postaci:\
-a) $\phi(t) = \exp(\frac{t^2}{2}),$\
-b)
-
-$$\phi(t) = \begin{cases}
+a) $\phi(t) = \exp(\frac{t^2}{2}),$ \
+b) $\phi(t) = \begin{cases}
 1-|t| & \text{dla } |t| \le 1,   \\
 0     & \text{dla } |t| > 0, \\
-\end{cases}$$
-
+\end{cases}$ \
 c) $\phi(t) = e^{2it-3|t|},$ \
 d) $\phi(t) = e^{2it},$ \
 e) $\phi(t) = \cos(t),$ \
@@ -197,60 +188,49 @@ $\int\limits_{-\infty}^\infty \left|\exp(-\frac{t^2}{2})\right|dt = \sqrt{2\pi} 
 
 Warunek jest spełniony więc korzystam z wzoru nr I:
 
-$$f(x) = \frac{1}{2\pi}\int\limits_{-\infty}^\infty \exp(-itx)\exp(-\frac{t^2}{2})dt =
-\frac{1}{2\pi}\int\limits_{-\infty}^\infty exp(-itx - \frac{t^2}{2})dt$$
-
-$$= \frac{1}{2\pi}\int\limits_{-\infty}^\infty exp[-\frac{1}{2}t(ix + ix + t)]dt =
-\left|\begin{aligned} u = t + ix \\ du = dt \end{aligned}\right|$$
-
-$$=\frac{1}{2\pi}\int\limits_{-\infty}^\infty exp[-\frac{1}{2}(u - ix)(u + ix)]du =
-\frac{1}{2\pi}\int\limits_{-\infty}^\infty exp[-\frac{1}{2}(u^2 +x^2)]du$$
-
-$$=\frac{1}{2\pi}\exp(-\frac{x^2}{2}) \int\limits_{-\infty}^\infty exp(-\frac{u^2}{2})du =
-\frac{1}{2\pi}\exp(-\frac{x^2}{2}) \sqrt{2\pi} =
-\frac{1}{\sqrt{2\pi}}\exp(-\frac{x^2}{2})$$
+$\begin{aligned}f(x) &= \frac{1}{2\pi}\int\limits_{-\infty}^\infty \exp(-itx)\exp(-\frac{t^2}{2})dt =
+\frac{1}{2\pi}\int\limits_{-\infty}^\infty exp(-itx - \frac{t^2}{2})dt = \\
+&= \frac{1}{2\pi}\int\limits_{-\infty}^\infty exp[-\frac{1}{2}t(ix + ix + t)]dt =
+\left|\begin{aligned} u = t + ix \\ du = dt \end{aligned}\right| = \\
+&=\frac{1}{2\pi}\int\limits_{-\infty}^\infty exp[-\frac{1}{2}(u - ix)(u + ix)]du =
+\frac{1}{2\pi}\int\limits_{-\infty}^\infty exp[-\frac{1}{2}(u^2 +x^2)]du = \\
+&=\frac{1}{2\pi}\exp(-\frac{x^2}{2}) \int\limits_{-\infty}^\infty exp(-\frac{u^2}{2})du =
+\frac{1}{2\pi}\exp(-\frac{x^2}{2}) \sqrt{2\pi} = \\
+&= \frac{1}{\sqrt{2\pi}}\exp(-\frac{x^2}{2})\end{aligned}$
 
 b)
 
 Sprawdzam warunek czy mogę skorzystać z wzoru nr I:
 
-$$|1-|t|| = \begin{cases}
+$|1-|t|| = \begin{cases}
 1-|t| & \text{dla } -1 < t < 1, \\
 |t|-1 & \text{w p.p.},          \\
-\end{cases}$$
+\end{cases}$
 
-$$|t| = \begin{cases}
+$|t| = \begin{cases}
 -t & \text{dla } t < 0,   \\
 t  & \text{dla } t\ge0, \\
-\end{cases}$$
+\end{cases}$
 
-$\int\limits_{-1}^1 |1-|t||dt =$
+$\int\limits_{-1}^1 |1-|t||dt = $
 
-$= \int\limits_{-1}^1 1-|t|dt$
+$= \int\limits_{-1}^1 1-|t|dt = $
 
-$= \int\limits_{-1}^0 (1+t)dt + \int\limits_0^1 (1-t)dt$
+$= \int\limits_{-1}^0 (1+t)dt + \int\limits_0^1 (1-t)dt = $
 
-$= (t+\frac{t^2}{2})\bigr|_{-1}^0 + (t-\frac{t^2}{2})\bigr|_0^1$
+$= (t+\frac{t^2}{2})\bigr|_{-1}^0 + (t-\frac{t^2}{2})\bigr|_0^1 = $
 
 $= 0+0+1-\frac{1}{2}+1--\frac{1}{2}-0+0=1<\infty.$
 
 Warunek jest spełniony więc korzystam z wzoru nr I:
 
-$f(x) = $
-
-$= \frac{1}{2\pi}\int\limits_{-1}^1 \exp(-itx) (1-|t|) dt$
-
-$= \frac{1}{2\pi}\left[\int\limits_{-1}^0 \exp(-itx) (1+t) dt  + \int\limits_{0}^1 \exp(-itx) (1-t) dt\right]$
-
-$= \frac{1}{2\pi}\left[\frac{ix - e^{ix} + 1}{x^2} - \frac{ix + e^{ix} -1}{x^2}\right]$
-
-$= \frac{1}{2\pi}\left[\frac{-e^{ix} + 1 -  e^{ix} +1}{x^2} \right]$
-
-$= \frac{1}{2\pi}\left[\frac{2 - 2 \frac{e^{ix} + e^{ix}}{2}}{x^2} \right]$
-
-$= \frac{1}{2\pi}\left[\frac{2 - 2\cos(x)}{x^2} \right]$
-
-$= \frac{1 - \cos(x)}{\pi x^2}$
+$\begin{aligned}f(x) &= \frac{1}{2\pi}\int\limits_{-1}^1 \exp(-itx) (1-|t|) dt = \\
+&= \frac{1}{2\pi}\left[\int\limits_{-1}^0 \exp(-itx) (1+t) dt  + \int\limits_{0}^1 \exp(-itx) (1-t) dt\right] = \\
+&= \frac{1}{2\pi}\left[\frac{ix - e^{ix} + 1}{x^2} - \frac{ix + e^{ix} -1}{x^2}\right] = \\
+&= \frac{1}{2\pi}\left[\frac{-e^{ix} + 1 -  e^{ix} +1}{x^2} \right] = \\
+&= \frac{1}{2\pi}\left[\frac{2 - 2 \frac{e^{ix} + e^{ix}}{2}}{x^2} \right] = \\
+&= \frac{1}{2\pi}\left[\frac{2 - 2\cos(x)}{x^2} \right] = \\
+&= \frac{1 - \cos(x)}{\pi x^2}\end{aligned}$
 
 c)
 
@@ -280,17 +260,11 @@ $+ \lim\limits_{M\to\infty} e^{-3M}\frac{\cos(2M-Mx) + i\sin(2M-Mx)}{-3+2i-ix} -
 
 Drugi i trzeci składnik jest zerem, ponieważ są to granice iloczynu funkcji, w których pierwszy czynnik dąży do zera a drugi jest funkcją ograniczoną. Otrzymuję więc:
 
-$f(x) =$ 
-
-$= \frac{1}{2\pi}\left(\frac{1}{3+2i-ix} - \frac{1}{-3+2i-ix}\right)$
-
-$= \frac{1}{2\pi}\left[\frac{1}{i(2-x)+3} - \frac{1}{i(2-x)-3}\right]$
-
-$= \frac{1}{2\pi}\left[\frac{i(2-x)-3}{i^2(2-x)^2-9} - \frac{i(2-x)+3}{i^2(2-x)^2-9}\right]$
-
-$= \frac{1}{2\pi}\left[\frac{i(2-x) - 3 - i(2-x) - 3}{-(2-x)^2-9}\right]$
-
-$= \frac{1}{\pi}\frac{3}{(2-x)^2+9}.$
+$\begin{aligned}f(x) &= \frac{1}{2\pi}\left(\frac{1}{3+2i-ix} - \frac{1}{-3+2i-ix}\right) = \\
+&= \frac{1}{2\pi}\left[\frac{1}{i(2-x)+3} - \frac{1}{i(2-x)-3}\right] = \\
+&= \frac{1}{2\pi}\left[\frac{i(2-x)-3}{i^2(2-x)^2-9} - \frac{i(2-x)+3}{i^2(2-x)^2-9}\right] = \\
+&= \frac{1}{2\pi}\left[\frac{i(2-x) - 3 - i(2-x) - 3}{-(2-x)^2-9}\right] = \\
+&= \frac{1}{\pi}\frac{3}{(2-x)^2+9}\end{aligned}.$
 
 Jest to gęstość rozkładu Cauchy'ego o parametrach $\mu = 2$, $\lambda=3$.
 
