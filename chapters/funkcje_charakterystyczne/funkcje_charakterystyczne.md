@@ -29,7 +29,21 @@ gdzie $p_k = P(X = k)$ dla $k = 0, \pm1, \pm2,...,$ oraz $\sum_{k}p_k=1,$ przy c
 
 Wygodnie jest używać funkcji charakterystycznych do badania rozkładów bo zachodzą następujące zależności:
 
-1. Jeżeli istnieje k-ty moment zmiennej losowej $X$ o funkcji charakterystycznej $\phi$, to $\phi$ jest k-krotnie różniczkowalna (w sposób ciągły) i zachodzi związek: $$E(X^k) = \frac{1}{i^k}\phi^{(k)}(0)$$ oraz jeśli można rozwinąć $\phi(t)$ w szereg Maclaurina, to: $$\phi(t) = \sum_{k=0}^\infty a_k t^k,$$ gdzie: $$a_k = \frac{\phi^{(k)}(0)}{k!}.$$ Dowolny moment zwykły można policzyć z wzoru: $$E(X^k) = \frac{a_kk!}{i^k}.$$
+1. Jeżeli istnieje k-ty moment zmiennej losowej $X$ o funkcji charakterystycznej $\phi$, to $\phi$ jest k-krotnie różniczkowalna (w sposób ciągły) i zachodzi związek: 
+
+    $$E(X^k) = \frac{1}{i^k}\phi^{(k)}(0)$$ 
+
+    oraz jeśli można rozwinąć $\phi(t)$ w szereg Maclaurina, to: 
+    
+    $$\phi(t) = \sum_{k=0}^\infty a_k t^k,$$
+    
+    gdzie:
+    
+    $$a_k = \frac{\phi^{(k)}(0)}{k!}.$$ 
+    
+    Dowolny moment zwykły można policzyć z wzoru: 
+    
+    $$E(X^k) = \frac{a_kk!}{i^k}.$$
 
 2. Funkcja charakterystyczna sumy dowolnej skończonej liczby niezależnych zmiennych losowych równa się iloczynowi funkcji charakterystycznych tych zmiennych.
 
