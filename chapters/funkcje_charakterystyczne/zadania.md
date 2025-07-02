@@ -37,11 +37,8 @@ Gęstość rozkładu geometrycznego to:
 
 $p_k = P(X = k) = p(1-p)^{k-1} \text{ dla } k=1, 2, 3,...$
 
-$\phi(t) = \sum\limits_{k} p_k e^{itk} = \sum\limits_{k=1}^\infty p(1-p)^{k-1} e^{itk} =$
-
-$= \sum\limits_{k=1}^\infty pe^{it}(1-p)^{k-1} (e^{it})^{k-1} =$
-
-$ = pe^{it} \sum\limits_{k=1}^\infty [(1-p)e^{it}]^{k-1}.$
+$\begin{aligned}\phi(t) &= \sum\limits_{k} p_k e^{itk} = \sum\limits_{k=1}^\infty p(1-p)^{k-1} e^{itk} = \\
+&= \sum\limits_{k=1}^\infty pe^{it}(1-p)^{k-1} (e^{it})^{k-1} = pe^{it} \sum\limits_{k=1}^\infty [(1-p)e^{it}]^{k-1}.\end{aligned}$
 
 Powyżej jest suma szeregu geometrycznego, gdzie $q = (1-p)e^{it}$ co daje:
 
@@ -53,9 +50,7 @@ Gęstość rozkładu dwumianowego to:
 
 $p_k = P(X = k) = {n\choose k}p^kq^{n-k} \text{ dla } k=0, 1, 2,...,n; q= 1-p.$
 
-$\phi(t) = \sum\limits_{k} p_k e^{itk} = \sum\limits_{k=0}^n {n\choose k}p^kq^{n-k}e^{itk} = \sum\limits_{k=0}^n {n\choose k}(pe^{it})^kq^{n-k} =$
-
-$= (pe^{it} + q)^n.$
+$\phi(t) = \sum\limits_{k} p_k e^{itk} = \sum\limits_{k=0}^n {n\choose k}p^kq^{n-k}e^{itk} = \sum\limits_{k=0}^n {n\choose k}(pe^{it})^kq^{n-k} = (pe^{it} + q)^n.$
 
 Powyżej skorzystałem z wzoru dwumianowego.
 
@@ -67,34 +62,29 @@ $\phi(t) =  (\frac{1}{2}e^{it} + \frac{1}{2})^3 = \frac{1}{8}(e^{it} + 1)^3.$
 
 e)
 
-$\phi(t) = \int\limits_{-\infty}^{\infty}e^{itx}f(x) dx =$
-
-$= \int\limits_{a}^{\infty} e^{itx} \frac{1}{\lambda} \exp(-\frac{x-a}{\lambda}) dx = \int\limits_{a}^{\infty} \frac{1}{\lambda} \exp\left(itx-\frac{x-a}{\lambda}\right)dx = $
-
-$= \int\limits_{a}^{\infty} \frac{1}{\lambda} \exp\left[\frac{x(\lambda it-1) + a}{\lambda}\right]dx = \int\limits_{a}^{\infty} \frac{1}{\lambda} \exp(\frac{a}{\lambda})\exp\left[\frac{x(\lambda it-1) + a}{\lambda}\right]dx =$
-
-$= \frac{1}{\lambda} \exp(\frac{a}{\lambda}) \int\limits_{a}^{\infty} \exp\left[\frac{x(\lambda it-1)}{\lambda}\right]dx$
+$\begin{aligned}\phi(t) &= \int\limits_{-\infty}^{\infty}e^{itx}f(x) dx = \int\limits_{a}^{\infty} e^{itx} \frac{1}{\lambda} \exp(-\frac{x-a}{\lambda}) dx = \\
+&= \int\limits_{a}^{\infty} \frac{1}{\lambda} \exp\left(itx-\frac{x-a}{\lambda}\right)dx = \int\limits_{a}^{\infty} \frac{1}{\lambda} \exp\left[\frac{x(\lambda it-1) + a}{\lambda}\right]dx = \\
+&= \int\limits_{a}^{\infty} \frac{1}{\lambda} \exp(\frac{a}{\lambda})\exp\left[\frac{x(\lambda it-1) + a}{\lambda}\right]dx = \\
+&= \frac{1}{\lambda} \exp(\frac{a}{\lambda}) \int\limits_{a}^{\infty} \exp\left[\frac{x(\lambda it-1)}{\lambda}\right]dx\end{aligned}$
 
 Zbadam istnienie granicy:
 
-$\lim\limits_{N\to\infty} \int\limits_{a}^{\infty} \exp\left[\frac{x(\lambda it-1)}{\lambda}\right]dx = \lim\limits_{N\to\infty}\left[ \frac{\exp\left[\frac{x(\lambda it-1)}{\lambda}\right]}{\frac{\lambda it-1}{\lambda}}\right]_a^N =$
+$\lim\limits_{N\to\infty} \int\limits_{a}^{\infty} \exp\left[\frac{x(\lambda it-1)}{\lambda}\right]dx = \lim\limits_{N\to\infty}\left[ \frac{\exp\left[\frac{x(\lambda it-1)}{\lambda}\right]}{\frac{\lambda it-1}{\lambda}}\right]_a^N = $
 
+$= \frac{\lambda}{\lambda it - 1} \lim\limits_{N\to\infty}\left[ \exp\left[\frac{x(\lambda it-1)}{\lambda}\right]\right]_a^N = $
 
-$= \frac{\lambda}{\lambda it - 1} \lim\limits_{N\to\infty}\left[ \exp\left[\frac{x(\lambda it-1)}{\lambda}\right]\right]_a^N$ 
+$= \frac{\lambda}{\lambda it - 1} \lim\limits_{N\to\infty} \exp\left[\frac{N\lambda it-N}{\lambda}\right] - \frac{\lambda}{\lambda it - 1} \exp\left[\frac{a\lambda it-a}{\lambda}\right] = $
 
-$= \frac{\lambda}{\lambda it - 1} \lim\limits_{N\to\infty} \exp\left[\frac{N\lambda it-N}{\lambda}\right] - \frac{\lambda}{\lambda it - 1} \exp\left[\frac{a\lambda it-a}{\lambda}\right]$
-
-$= \frac{\lambda}{\lambda it - 1} \lim\limits_{N\to\infty} \exp[-\frac{N}{\lambda}] \exp[N it] - \frac{\lambda}{\lambda it - 1} \exp\left[\frac{a\lambda it-a}{\lambda}\right]$
+$= \frac{\lambda}{\lambda it - 1} \lim\limits_{N\to\infty} \exp[-\frac{N}{\lambda}] \exp[N it] - \frac{\lambda}{\lambda it - 1} \exp\left[\frac{a\lambda it-a}{\lambda}\right] = $
 
 $= \frac{\lambda}{\lambda it - 1} \lim\limits_{N\to\infty} \exp[-\frac{N}{\lambda}][\cos(Nt)+i\sin(Nt)] - \frac{\lambda}{\lambda it - 1} \exp\left[\frac{a\lambda it-a}{\lambda}\right]$
 
 Pierwszy składnik jest zerem, ponieważ jest to granica iloczynu funkcji, w którym pierwszy czynnik dąży do zera a drugi jest funkcją ograniczoną. Otrzymuję więc:
 
-$\phi(t) = - \frac{1}{\lambda} \exp\left[\frac{a}{\lambda}\right] \frac{\lambda}{\lambda it - 1} \exp\left[\frac{a\lambda it-a}{\lambda}\right] =$
-
-$= \frac{\lambda}{1- \lambda it} \exp\left[\frac{a\lambda it-a}{\lambda}\right] \exp\left[\frac{a}{\lambda}\right] = \frac{\lambda}{1- \lambda it} \exp\left[\frac{a\lambda it-a}{\lambda}+\frac{a}{\lambda}\right] =$
-
-$= \frac{e^{ait}}{1- \lambda it}.$
+$\begin{aligned}\phi(t) &= - \frac{1}{\lambda} \exp\left[\frac{a}{\lambda}\right] \frac{\lambda}{\lambda it - 1} \exp\left[\frac{a\lambda it-a}{\lambda}\right] = \\
+&= \frac{\lambda}{1- \lambda it} \exp\left[\frac{a\lambda it-a}{\lambda}\right] \exp\left[\frac{a}{\lambda}\right] = \\
+&= \frac{\lambda}{1- \lambda it} \exp\left[\frac{a\lambda it-a}{\lambda}+\frac{a}{\lambda}\right] = \\
+&= \frac{e^{ait}}{1- \lambda it}.\end{aligned}$
 
 f)
 
@@ -103,13 +93,10 @@ $|x| = \begin{cases}
 x   & \text{dla } x \ge 0, \\
 \end{cases}$
 
-$\phi(t) =  \int\limits_{-\infty}^{\infty}e^{itx}f(x) dx = $
-
-$= \int\limits_{-\infty}^{0}e^{itx}\frac{1}{2}e^{x} dx + \int\limits_{0}^{\infty}e^{itx}\frac{1}{2}e^{-x} dx $
-
-$= \int\limits_{-\infty}^{0} \frac{1}{2}e^{itx+x}dx + \int\limits_{0}^{\infty}\frac{1}{2}e^{itx-x}dx$
-
-$= \frac{1}{2}\left[ \int\limits_{-\infty}^{0} e^{itx+x}dx + \int\limits_{0}^{\infty}e^{itx-x}dx \right].$
+$\begin{aligned}\phi(t) &= \int\limits_{-\infty}^{\infty}e^{itx}f(x) dx = \\
+&= \int\limits_{-\infty}^{0}e^{itx}\frac{1}{2}e^{x} dx + \int\limits_{0}^{\infty}e^{itx}\frac{1}{2}e^{-x} dx = \\
+&= \int\limits_{-\infty}^{0} \frac{1}{2}e^{itx+x}dx + \int\limits_{0}^{\infty}\frac{1}{2}e^{itx-x}dx = \\
+&= \frac{1}{2}\left[ \int\limits_{-\infty}^{0} e^{itx+x}dx + \int\limits_{0}^{\infty}e^{itx-x}dx \right].\end{aligned}$
 
 Zbadam istnienie granic:
 
@@ -123,7 +110,11 @@ $=\frac{1}{it+1} - \lim\limits_{N\to\infty} e^{-N}\frac{\cos(Nt) - i\sin(Nt)}{it
 
 Drugi i czwarty składnik jest zerem, ponieważ są to granice iloczynu funkcji, w których pierwszy czynnik dąży do zera a drugi jest funkcją ograniczoną. Otrzymuję więc:
 
-$\phi(t) = \frac{1}{2}\left[\frac{1}{it+1} - \frac{1}{it-1}  \right] = \frac{1}{2}\left[\frac{it-1}{i^2t^2-1} - \frac{it+1}{i^2t^2-1}  \right] = \frac{1}{2}\left[\frac{it-1-it-1}{-t^2-1}\right] = \frac{1}{2}\left[\frac{2}{t^2+1}\right] = \frac{1}{t^2+1}$
+$\begin{aligned}\phi(t) &= \frac{1}{2}\left[\frac{1}{it+1} - \frac{1}{it-1}  \right] = \\
+&= \frac{1}{2}\left[\frac{it-1}{i^2t^2-1} - \frac{it+1}{i^2t^2-1}  \right] = \\
+&= \frac{1}{2}\left[\frac{it-1-it-1}{-t^2-1}\right] = \\
+&= \frac{1}{2}\left[\frac{2}{t^2+1}\right] = \\
+&= \frac{1}{t^2+1}\end{aligned}$
 ```
 
 ## Zadanie 2
@@ -134,9 +125,9 @@ Zmienna losowa $X$ ma rozkład prawdopodobieństwa o funkcji charakterystycznej 
 
 $Y = aX + b,$
 
-$\phi_Y(t) = E[e^{it(aX+b)}] = \int\limits_{-\infty}^\infty e^{it(ax+b)} f(x) dx =  \int\limits_{-\infty}^\infty e^{itax+itb} f(x) dx =$
-
-$=e^{itb} \int\limits_{-\infty}^\infty e^{itax} f(x) dx = e^{itb}\phi(at)$
+$\begin{aligned}\phi_Y(t) &= E[e^{it(aX+b)}] = \int\limits_{-\infty}^\infty e^{it(ax+b)} f(x) dx = \\
+&= \int\limits_{-\infty}^\infty e^{itax+itb} f(x) dx = e^{itb} \int\limits_{-\infty}^\infty e^{itax} f(x) dx = \\
+&= e^{itb}\phi(at)\end{aligned}$
 ```
 
 ## Zadanie 3
@@ -212,15 +203,11 @@ $|t| = \begin{cases}
 t  & \text{dla } t\ge0, \\
 \end{cases}$
 
-$\int\limits_{-1}^1 |1-|t||dt = $
+$\int\limits_{-1}^1 |1-|t||dt = \int\limits_{-1}^1 1-|t|dt = $
 
-$= \int\limits_{-1}^1 1-|t|dt = $
+$= \int\limits_{-1}^0 (1+t)dt + \int\limits_0^1 (1-t)dt = (t+\frac{t^2}{2})\bigr|_{-1}^0 + (t-\frac{t^2}{2})\bigr|_0^1 = $
 
-$= \int\limits_{-1}^0 (1+t)dt + \int\limits_0^1 (1-t)dt = $
-
-$= (t+\frac{t^2}{2})\bigr|_{-1}^0 + (t-\frac{t^2}{2})\bigr|_0^1 = $
-
-$= 0+0+1-\frac{1}{2}+1--\frac{1}{2}-0+0=1<\infty.$
+$= 0+0+1-\frac{1}{2}+1-\frac{1}{2}-0+0=1<\infty.$
 
 Warunek jest spełniony więc korzystam z wzoru nr I:
 
@@ -248,13 +235,13 @@ W całce pojawiają się nieskończoności więc należy zbadać istnienie grani
 
 $\lim\limits_{N\to\infty} \int\limits_{-N}^0 e^{-itx + 2it + 3t} dt + \lim\limits_{M\to\infty} \int\limits_0^M e^{-itx + 2it - 3t} dt =$
 
-$= \lim\limits_{N\to\infty} \left[\frac{e^{3t + 2it + itx}}{3+2i-ix} \right]_{-N}^0 + \lim\limits_{M\to\infty} \left[\frac{e^{-3t + 2it - itx}}{-3+2i-ix} \right]_0^M$
+$= \lim\limits_{N\to\infty} \left[\frac{e^{3t + 2it + itx}}{3+2i-ix} \right]_{-N}^0 + \lim\limits_{M\to\infty} \left[\frac{e^{-3t + 2it - itx}}{-3+2i-ix} \right]_0^M =$
 
-$= \frac{1}{3+2i-ix} - \lim\limits_{N\to\infty} \frac{e^{-3N - 2iN - iNx}}{3+2i-ix} + \lim\limits_{M\to\infty} \frac{e^{-3M + 2iM - iMx}}{-3+2i-ix} - \frac{1}{-3+2i-ix}$
+$= \frac{1}{3+2i-ix} - \lim\limits_{N\to\infty} \frac{e^{-3N - 2iN - iNx}}{3+2i-ix} + \lim\limits_{M\to\infty} \frac{e^{-3M + 2iM - iMx}}{-3+2i-ix} - \frac{1}{-3+2i-ix} =$
 
-$= \frac{1}{3+2i-ix} - \lim\limits_{N\to\infty} e^{-3N} \frac{e^{-2iN - iNx}}{3+2i-ix} + \lim\limits_{M\to\infty} e^{-3M}\frac{e^{2iM - iMx}}{-3+2i-ix} - \frac{1}{-3+2i-ix}$
+$= \frac{1}{3+2i-ix} - \lim\limits_{N\to\infty} e^{-3N} \frac{e^{-2iN - iNx}}{3+2i-ix} + \lim\limits_{M\to\infty} e^{-3M}\frac{e^{2iM - iMx}}{-3+2i-ix} - \frac{1}{-3+2i-ix} =$
 
-$= \frac{1}{3+2i-ix} - \lim\limits_{N\to\infty} e^{-3N} \frac{\cos(-2N - Nx) + i\sin(-2N - Nx)}{3+2i-ix}$
+$= \frac{1}{3+2i-ix} - \lim\limits_{N\to\infty} e^{-3N} \frac{\cos(-2N - Nx) + i\sin(-2N - Nx)}{3+2i-ix} +$
 
 $+ \lim\limits_{M\to\infty} e^{-3M}\frac{\cos(2M-Mx) + i\sin(2M-Mx)}{-3+2i-ix} - \frac{1}{-3+2i-ix}$
 
