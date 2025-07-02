@@ -806,8 +806,8 @@ $h(y) = \frac{y-b}{a},$
 
 $h'(y) = \frac{1}{a},$
 
-$f_Y(y) = |\frac{1}{a}|f_X(\frac{y-b}{a}) = \frac{1}{\sigma a \sqrt{2\pi}}exp\left( \frac{-\left( \frac{y-b}{a} - m \right)^2}{2\sigma^2}\right)$\
-$=\frac{1}{\sigma a \sqrt{2\pi}}exp\left( \frac{-(y - b - am)^2}{2\sigma^2a^2}\right).$
+$\begin{aligned}f_Y(y) &= |\frac{1}{a}|f_X(\frac{y-b}{a}) = \frac{1}{\sigma a \sqrt{2\pi}}exp\left( \frac{-\left( \frac{y-b}{a} - m \right)^2}{2\sigma^2}\right) = \\
+&= \frac{1}{\sigma a \sqrt{2\pi}}exp\left( \frac{-(y - b - am)^2}{2\sigma^2a^2}\right).\end{aligned}$
 
 Zmienna $Y$ pochodzi z rozkładu $N(b+am, \sigma a)$.
 ```
@@ -852,7 +852,8 @@ Zmienna losowa $X$ podlega rozkładowi $N(3, 5)$. Obliczyć $P(|X − 1| > 1)$.
 
 ````{dropdown} Rozwiązanie
 
-$P(|X − 1| > 1) = P(X - 1 > 1 \ \cup X - 1 < -1) = P(X > 2 \ \cup X < 0) = P(X < 0) + 1 - P(X < 2)$
+$\begin{aligned}P(|X − 1| > 1) &= P(X - 1 > 1 \ \cup X - 1 < -1) = P(X > 2 \ \cup X < 0) = \\
+&= P(X < 0) + 1 - P(X < 2)\end{aligned}$
 
 ```python
 import scipy.stats as st
@@ -955,7 +956,9 @@ Skorzystam ze standaryzacji zmiennej losowej:
 
 a)
 
-$P(|X − m| < 3\sigma) = P(-3\sigma < X − m < 3\sigma) = P(\frac{m-3\sigma-m}{\sigma} < Z < \frac{m+3\sigma-m}{\sigma}) = P(-3 < Z < 3) = \Phi(3) - \Phi(-3).$
+$\begin{aligned}P(|X − m| < 3\sigma) &= P(-3\sigma < X − m < 3\sigma) = \\
+&= P(\frac{m-3\sigma-m}{\sigma} < Z < \frac{m+3\sigma-m}{\sigma}) = \\
+&= P(-3 < Z < 3) = \Phi(3) - \Phi(-3).\end{aligned}$
 
 ```python
 import scipy.stats as st
@@ -1021,11 +1024,11 @@ Należy zsumować 300 niezależnych zmiennych losowych $X_i$.
 ## Zadanie 38
 Funkcja gęstości zmiennej losowej $X$ ma postać
 
-$$f(x) =
+$f(x) =
 \begin{cases}
 3x^2 & \text{dla } x \in [0, 1], \\
 0    & \text{dla } x \notin [0, 1].
-\end{cases}$$
+\end{cases}$
 
 Obliczyć wartość oczekiwana i wariancje zmiennej $X$.
 
@@ -1041,12 +1044,12 @@ $Var(X) = 0.6 - 0.75^2 = 0.0375.$
 ## Zadanie 39
 Zmienna losowa X ma rozkład o gęstości prawdopodobieństwa:
 
-$$f(x) =
+$f(x) =
 \begin{cases}
 0              & \text{dla } x < −1, \\
 \frac{2}{5}|x| & \text{dla } x \in [-1, 2], \\
 0              & \text{dla } x > 2.
-\end{cases}$$
+\end{cases}$
 
 a) Znaleźć dystrybuantę.\
 b) Obliczyć $E(X)$ oraz $Var(X)$.\
@@ -1070,13 +1073,13 @@ $\int\limits_{-1}^0 -\frac{2}{5} x dx  + \int\limits_{0}^t \frac{2}{5} x dx = \f
 
 Dystrybuanta:
 
-$$F(x) =
+$F(x) =
 \begin{cases}
 0                    & \text{dla } x < −1, \\
 \frac{1}{5}(1 - x^2) & \text{dla } x \in [-1, 0), \\
 \frac{1}{5}(1 + x^2) & \text{dla } x \in [0, 2), \\
 1                    & \text{dla } x > 2.
-\end{cases}$$
+\end{cases}$
 
 b) 
 
@@ -1100,9 +1103,10 @@ Gęstość zmiennej losowej $X$ ma postać: $f(x) = \frac{a}{e^x+e^{−x}}, \ x 
 
 ````{dropdown} Rozwiązanie
 
-$$1 =\int\limits_{-\infty}^\infty \frac{a}{e^x+e^{−x}}dx = a\int\limits_{-\infty}^\infty \frac{1}{e^x+e^{−x}}dx = a\int\limits_{-\infty}^\infty \frac{e^xdx}{(e^x)^2+1}$$ 
-
-$$= \left|\begin{aligned}e^x = t \\ e^xdx = dt \end{aligned} \right| = a\int\limits_0^\infty \frac{dt}{t^2+1}=a\cdot arctg(t)\bigr|_0^\infty = \frac{a\pi}{2}$$
+$\begin{aligned}1 &= \int\limits_{-\infty}^\infty \frac{a}{e^x+e^{−x}}dx = a\int\limits_{-\infty}^\infty \frac{1}{e^x+e^{−x}}dx = \\
+&= a\int\limits_{-\infty}^\infty \frac{e^xdx}{(e^x)^2+1} = \left|\begin{aligned}e^x = t \\ e^xdx = dt \end{aligned} \right| = \\
+&= a\int\limits_0^\infty \frac{dt}{t^2+1} = a\cdot arctg(t)\bigr|_0^\infty = \\
+&= \frac{a\pi}{2}\end{aligned}$
 
 $2 = a\pi$
 
@@ -1124,11 +1128,11 @@ print(quad(f, 0, np.inf)[0])
 ## Zadanie 41
 Zmienna losowa $X$ ma rozkład o gęstości prawdopodobieństwa
 
-$$
+$
 f(x) = \begin{cases}
 \frac{x}{2} & \text{dla } 0 \le x \le 2, \\
 0           & \text{dla pozostałych } x.
-\end{cases}$$
+\end{cases}$
 
 a) Obliczyć $E(X)$ oraz $Var(X)$.\
 b) Wyznaczyć momenty centralne rzędu pierwszego, drugiego i trzeciego oraz kwartyle zmiennej $X$.
@@ -1177,14 +1181,14 @@ $t_{0.75} = \sqrt{3}.$
 ## Zadanie 42
 Dobrać tak stała $a$, by funkcja
 
-$$
+$
 F(x) =
 \begin{cases}
 0                  & \text{dla } x \le 1, \\
 2(1 - \frac{1}{x}) & \text{dla } 1 < x  \le a, \\
 1                  & \text{dla } x > a.
 \end{cases}
-$$
+$
 
 była dystrybuantą zmiennej losowej $X$ typu ciągłego. Wyznaczyć jej gęstość. Obliczyć $P(−1 \le X \le 1.5)$.
 
@@ -1194,13 +1198,13 @@ $2(1 - \frac{1}{a}) = 1,$
 
 $a = 2.$
 
-$$
+$
 f(x) =
 \begin{cases}
 \frac{2}{x^2} & \text{dla } 1 < x  \le 2, \\
 0             & \text{w p.p.}
 \end{cases}
-$$
+$
 
 $P(−1 \le X \le 1.5) = P(X \le 1.5) - P(X \le -1) = 2(1 - \frac{1}{1.5}) - 0 = \frac{2}{3}.$
 ```
@@ -1228,12 +1232,12 @@ $a = 2\sqrt{3}$
 ## Zadanie 44
 Gęstość prawdopodobieństwa zmiennej losowej $X$ ma postać
 
-$$
+$
 f(x) = \begin{cases}
 \sin(2x) &  \text{dla } x \in [0, \frac{\pi}{2}], \\
 0       &  \text{dla } x \notin [0, \frac{\pi}{2}].
 \end{cases}
-$$
+$
 
 a) Znaleźć dystrybuantę $X$.\
 b) Obliczyć $EX$ oraz $VarX$.\
@@ -1246,13 +1250,13 @@ a)
 
 $\int\limits_0^t sin(2x)dx = -\frac{cos(2x)}{2}\bigr|_0^t = \frac{1}{2} - \frac{cos(2t)}{2}$
 
-$$
+$
 F(x) = \begin{cases}
 0                               & \text{dla } x < 0, \\
 \frac{1}{2} - \frac{cos(2t)}{2} & \text{dla } x \in [0, 2), \\
 1                               & \text{dla } x \ge 2. \\
 \end{cases}
-$$
+$
 
 b)
 
@@ -1286,12 +1290,12 @@ $x_{0.75} = \frac{\pi}{3}.$
 ## Zadanie 45
 Gęstość prawdopodobieństwa zmiennej losowej $X$ ma postać
 
-$$
+$
 f(x) = \begin{cases}
 \frac{a}{\sqrt{4−x^2}} & \text{dla } x \in (−1, 2), \\
 0                      & \text{dla } x \notin (−1, 2). \\
 \end{cases}
-$$
+$
 
 Znaleźć:\
 a) stałą $a$,\
@@ -1309,19 +1313,18 @@ $a = \frac{3}{2\pi}$
 
 b)
 
-$$\frac{3}{2\pi} \int\limits_{-1}^t \frac{dx}{\sqrt{4−x^2}} = \frac{3}{2\pi} \int\limits_{-1}^t \frac{dx}{2\sqrt{1−(\frac{x}{2})^2}} $$
+$\begin{aligned}\frac{3}{2\pi} \int\limits_{-1}^t \frac{dx}{\sqrt{4−x^2}} &= \frac{3}{2\pi} \int\limits_{-1}^t \frac{dx}{2\sqrt{1−(\frac{x}{2})^2}} = \left|\begin{aligned}\frac{x}{2} = \sin(u) \\ dx = 2\cos(u)du \\ u = \arcsin(\frac{x}{2}) \end{aligned}\right| = \\
+&= \frac{3}{2\pi} \int\limits_{-\frac{\pi}{6}}^{\arcsin(\frac{t}{2})} \frac{2\cos(u)du}{2\sqrt{1−\sin^2(u)}} = \frac{3}{2\pi} \int\limits_{-\frac{\pi}{6}}^{\arcsin(\frac{t}{2})} \frac{\cos(u)du}{\sqrt{\cos^2(u)}} = \\
+&= \frac{3}{2\pi} \int\limits_{-\frac{\pi}{6}}^{\arcsin(\frac{t}{2})} du = \left. \frac{3}{2\pi} u\right|_{-\frac{\pi}{6}}^{\arcsin(\frac{t}{2})} = \\
+&= \frac{3}{2\pi}(\arcsin(\frac{t}{2})+ \frac{\pi}{6})\end{aligned}$
 
-$$= \left|\begin{aligned}\frac{x}{2} = \sin(u) \\ dx = 2\cos(u)du \\ u = \arcsin(\frac{x}{2}) \end{aligned}\right| = \frac{3}{2\pi} \int\limits_{-\frac{\pi}{6}}^{\arcsin(\frac{t}{2})} \frac{2\cos(u)du}{2\sqrt{1−\sin^2(u)}}$$
-
-$$= \frac{3}{2\pi} \int\limits_{-\frac{\pi}{6}}^{\arcsin(\frac{t}{2})} \frac{\cos(u)du}{\sqrt{\cos^2(u)}} = \frac{3}{2\pi} \int\limits_{-\frac{\pi}{6}}^{\arcsin(\frac{t}{2})} du = \left. \frac{3}{2\pi} u\right|_{-\frac{\pi}{6}}^{\arcsin(\frac{t}{2})} = \frac{3}{2\pi}(\arcsin(\frac{t}{2})+ \frac{\pi}{6})$$
-
-$$
+$
 F(x) = \begin{cases}
 0                                                   & \text{dla } x < -1, \\
 \frac{3}{2\pi}(\arcsin(\frac{t}{2})+ \frac{\pi}{6}) & \text{dla } x \in [-1, 2), \\
 1                                                   & \text{dla } x \ge 2. \\
 \end{cases}
-$$
+$
 
 c)
 
@@ -1343,13 +1346,13 @@ $P(X = \frac{1}{2}) = 0.$
 ## Zadanie 46
 Gęstość zmiennej losowej $X$ ma postać
 
-$$
+$
 f(x) = \begin{cases}
 0    & \text{dla } x < 0, \\
 be^x & \text{dla } x \in [0, \ln3], \\
 0    & \text{dla } x > \ln3.
 \end{cases}
-$$
+$
 
 a) Wyznaczyć stałą $b$.\
 b) Znaleźć dystrybuantę $X$.\
@@ -1368,13 +1371,13 @@ b)
 
 $\frac{1}{2}\int\limits_0^{t}e^xdx = \frac{1}{2}(x^t - 1),$
 
-$$
+$
 F(x) = \begin{cases}
 0                    & \text{dla } x < 0, \\
 \frac{1}{2}(x^t - 1) & \text{dla } x \in [0, \ln3), \\
 1                    & \text{dla } x \ge \ln3. \\
 \end{cases}
-$$
+$
 
 c)
 
@@ -1382,7 +1385,9 @@ $E(X) = \frac{1}{2}\int\limits_0^{ln3}xe^xdx = \frac{3}{2}ln3-1,$
 
 $E(X^2) = \frac{1}{2}\int\limits_0^{ln3}x^2e^xdx = 2 - 3ln3 + \frac{3}{2}(ln3)^2,$
 
-$Var(X) = 2 - 3\ln3 + \frac{3}{2}(\ln3)^2 - (\frac{3}{2}\ln3-1)^2 = 2 - 3\ln3 + \frac{3}{2}(\ln3)^2 - \frac{9}{4}(\ln3)^2 + 3ln3 - 1 = 1 - \frac{3}{4}(\ln3)^2.$
+$\begin{aligned}Var(X) &= 2 - 3\ln3 + \frac{3}{2}(\ln3)^2 - (\frac{3}{2}\ln3-1)^2 = \\
+&= 2 - 3\ln3 + \frac{3}{2}(\ln3)^2 - \frac{9}{4}(\ln3)^2 + 3ln3 - 1 = \\
+&= 1 - \frac{3}{4}(\ln3)^2.\end{aligned}$
 
 d)
 
@@ -1392,25 +1397,25 @@ $P(X > 1) = 1 - P(X<1) = 1 -\frac{1}{2}(e^1-1) = \frac{3}{2} - \frac{e}{2}.$
 ## Zadanie 47
 Dystrybuanta zmiennej losowej $X$ jest postaci
 
-$$
+$
 F(x) = \begin{cases}
 0               & \text{dla } x \le 0, \\
 \frac{1}{27}x^3 & \text{dla } x \in (0, 3], \\
 1               & \text{dla } x > 3. \\
 \end{cases}
-$$
+$
 
 Znaleźć funkcję gęstości zmiennej $X$, obliczyć jej wartość oczekiwana oraz kwantyle $x_{0.125}$, $x_{\frac{1}{125}}$ i $x_{\frac{8}{27}}$.
 
 ```{dropdown} Rozwiązanie
 
-$$
+$
 f(x) = \begin{cases}
 0              & \text{dla } x < 0, \\
 \frac{1}{9}x^2 & \text{dla } x \in [0, 3], \\
 0              & \text{dla } x > 3.
 \end{cases}
-$$
+$
 
 $E(X) = \frac{1}{9}\int\limits_0^3x^3dx= \frac{9}{4}.$
 
@@ -1450,12 +1455,12 @@ $E(3XY − 2) = 3\cdot2\sqrt{3}-2 = 6\sqrt{3}-2.$
 ## Zadanie 49
 Zmienna losowa X ma rozkład o gęstości
 
-$$
+$
 f(x) = \begin{cases}
 |x| & \text{dla } -1 \le x \le 1, \\
 0   & \text{w p.p.}  
 \end{cases}
-$$
+$
 
 Znaleźć dystrybuantę, obliczyć $E(X)$, $Var(X)$, $P(X < 0)$, $P(X \ge­ 1)$.
 
@@ -1473,14 +1478,14 @@ Dla $x > 0$:
 
 $\int\limits_{-1}^0 -x dx + \int\limits_{0}^t x dx = \frac{1}{2} + \frac{t^2}{2}.$
 
-$$
+$
 F(x) = \begin{cases}
 0                           & \text{dla } x < 0, \\
 \frac{1}{2} - \frac{t^2}{2} & \text{dla } x \in [-1, 0), \\
 \frac{1}{2} + \frac{t^2}{2} & \text{dla } x \in [0, 1), \\
 1                           & \text{dla } x \ge 1. \\
 \end{cases}
-$$
+$
 
 $E(X) = \int\limits_{-1}^0 -x^2 dx + \int\limits_{0}^1 x^2 dx = 0,$
 
@@ -1496,12 +1501,12 @@ $P(X \ge 1) = 1 - P(X \le 1) = 1 - \frac{1}{2} - \frac{1}{2} = 0.$
 ## Zadanie 50
 Niech
 
-$$
+$
 f(x) = \begin{cases}
 \frac{3}{4}(1-x^2) & \text{dla } -1 \le x \le 1, \\
 0                  & \text{w p.p.}  
 \end{cases}
-$$
+$
 
 Znaleźć dystrybuantę i narysować jej wykres, obliczyć $E(X)$, $Var(X)$, $P(X < −\frac{1}{2})$, $P(|X| > \frac{1}{3})$.
 
@@ -1509,13 +1514,13 @@ Znaleźć dystrybuantę i narysować jej wykres, obliczyć $E(X)$, $Var(X)$, $P(
 
 $\frac{3}{4}\int\limits_{-1}^t 1 - x^2 dx = \frac{1}{4}(3t - t^3 + 2)$
 
-$$
+$
 F(x) = \begin{cases}
 0                         & \text{dla } x < 0, \\
 \frac{1}{4}(3t - t^3 + 2) & \text{dla } x \in [-1, 1), \\
 1                         & \text{dla } x \ge 1. \\
 \end{cases}
-$$
+$
 
 $E(X) = \int\limits_{-1}^1 \frac{3}{4}x(1-x^2) dx = 0,$
 
@@ -1525,17 +1530,17 @@ $Var(X) = 0.2,$
 
 $P(X < -\frac{1}{2}) = \frac{1}{4}(3(-\frac{1}{2}) - (-\frac{1}{2})^3 + 2) = \frac{5}{32},$
 
-$P(|X| > \frac{1}{3}) = P(X > \frac{1}{3} \cup X < -\frac{1}{3}) = P(X < - \frac{1}{3}) + 1 - P(X < \frac{1}{3})$
-$ = \frac{1}{4}(3(-\frac{1}{3}) - (- \frac{1}{3})^3 + 2) + 1 - \frac{1}{4}(3(\frac{1}{3}) - (\frac{1}{3})^3 + 2) = \frac{14}{27}.$
+$\begin{aligned}P(|X| > \frac{1}{3}) &= P(X > \frac{1}{3} \cup X < -\frac{1}{3}) = P(X < - \frac{1}{3}) + 1 - P(X < \frac{1}{3}) = \\
+&= \frac{1}{4}(3(-\frac{1}{3}) - (- \frac{1}{3})^3 + 2) + 1 - \frac{1}{4}(3(\frac{1}{3}) - (\frac{1}{3})^3 + 2) = \frac{14}{27}.\end{aligned}$
 ```
 
 ## Zadanie 51
 Dobrać tak stałą $a$, by funkcja
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 a \cos(x) & \text{dla } -\frac{\pi}{2} \le x < \frac{\pi}{2}, \\
 0         & \text{w p.p.}  
-\end{cases}$$
+\end{cases}$
 
 była gęstością pewnej zmiennej losowej $X$. Znaleźć dystrybuantę, obliczyć $E(X)$, $Var(X)$, $P(|X| > \frac{\pi}{6})$, $P(X ­ \ge \frac{\pi}{3})$, $P(−\frac{\pi}{6} < X \le \frac{\pi}{2})$ oraz medianę i modę $X$.
 
@@ -1549,11 +1554,11 @@ Dystrybuanta:
 
 $\frac{1}{2} \int\limits_{-\frac{\pi}{2}}^t \cos(x) dx = \frac{1}{2}(\sin(t)+1),$
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0                      & \text{dla } x < 0, \\
 \frac{1}{2}(\sin(x)+1) & \text{dla } -\frac{\pi}{2} \le x < \frac{\pi}{2}, \\
 1                      & \text{dla } x \ge 1. \\
-\end{cases}$$
+\end{cases}$
 
 $E(X) = \frac{1}{2}\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}} x \cos(x) dx = 0,$
 
@@ -1561,7 +1566,8 @@ $E(X^2) = \frac{1}{2}\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}} x^2\cos(x) dx 
 
 $Var(X) = \frac{\pi^2}{4} - 2,$
 
-$P(|X| > \frac{\pi}{6}) = P(X > \frac{\pi}{6} \cup X < -\frac{\pi}{6}) = P(X < -\frac{\pi}{6}) + 1 - P(X < \frac{\pi}{6}) = \frac{1}{2}(\sin(-\frac{\pi}{6})+1) + 1 - \frac{1}{2}(\sin(\frac{\pi}{6})+1) = 0.5,$
+$\begin{aligned}P(|X| > \frac{\pi}{6}) &= P(X > \frac{\pi}{6} \cup X < -\frac{\pi}{6}) = P(X < -\frac{\pi}{6}) + 1 - P(X < \frac{\pi}{6}) = \\
+&= \frac{1}{2}(\sin(-\frac{\pi}{6})+1) + 1 - \frac{1}{2}(\sin(\frac{\pi}{6})+1) = 0.5,\end{aligned}$
 
 $P(X \ge \frac{\pi}{3}) = 1 - P(X \le \frac{\pi}{3}) = 1 - \frac{1}{2}(\sin(\frac{\pi}{3})+1) = \frac{1}{2} - \frac{\sqrt{3}}{4},$
 
@@ -1595,10 +1601,10 @@ $x = 0.$
 ## Zadanie 52
 Funkcja gęstości prawdopodobieństwa zmiennej losowej X jest postaci:
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 0        & \text{dla } x \le 0, \\
 2e^{-2x} & \text{dla } x > 0.
-\end{cases}$$
+\end{cases}$
 
 Znaleźć dystrybuantę, obliczyć $E(X)$, $Var(X)$, $P(X > 1)$, $P(0 < X \le ln 3)$ oraz medianę $X$.
 
@@ -1606,10 +1612,10 @@ Znaleźć dystrybuantę, obliczyć $E(X)$, $Var(X)$, $P(X > 1)$, $P(0 < X \le ln
 
 $2\int\limits_0^t e^{-2x} dx = 1 - e^{-2t},$
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0           & \text{dla } x \le 0, \\
 1 - e^{-2x} & \text{dla } x > 1.
-\end{cases}$$
+\end{cases}$
 
 $E(X) = 2\int\limits_0^\infty xe^{-2x}dx = \frac{1}{2},$
 
@@ -1619,7 +1625,8 @@ $Var(X) = \frac{1}{4},$
 
 $P(X > 1) = 1 - P(X < 1) = 1 - (1-e^{-2}) = e^{-2},$
 
-$P(0 < X \le \ln3) = P(X \le \ln3) - P(X \le 0) = 1-e^{-2\ln3} - 0 = 1-e^{\ln(3^{-2})} = 1 - \frac{1}{3^2} = \frac{8}{9}.$
+$\begin{aligned}P(0 < X \le \ln3) &= P(X \le \ln3) - P(X \le 0) = 1-e^{-2\ln3} - 0 = \\
+&= 1-e^{\ln(3^{-2})} = 1 - \frac{1}{3^2} = \frac{8}{9}.\end{aligned}$
 
 Mediana:
 
@@ -1637,10 +1644,10 @@ $m = -\frac{\ln(0.2)}{2} = \frac{\ln2}{2}.$
 ## Zadanie 53
 Niech gęstość pewnej zmiennej $X$ będzie postaci
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 0             & \text{dla } x \le 1, \\
 \frac{2}{x^3} & \text{dla } x > 1.
-\end{cases}$$
+\end{cases}$
 
 Znaleźć dystrybuantę, obliczyć $E(X)$, $Var(X)$, $P(|X| > 1)$, oraz medianę $X$.
 
@@ -1648,10 +1655,10 @@ Znaleźć dystrybuantę, obliczyć $E(X)$, $Var(X)$, $P(|X| > 1)$, oraz medianę
 
 $2\int\limits_0^t \frac{1}{x^3} dx = 1 - t^{-2},$
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0          & \text{dla } x \le 1, \\
 1 - x^{-2} & \text{dla } x > 1.
-\end{cases}$$
+\end{cases}$
 
 $E(X) = 2\int\limits_0^\infty \frac{1}{x^2} dx = 2,$
 
@@ -1659,7 +1666,9 @@ $E(X^2) = 2\int\limits_0^\infty \frac{1}{x} dx = \infty,$
 
 $Var(X) = \infty,$
 
-$P(|X| > 1) = P(X > 1 \cup X < -1) = P(X < -1)+ 1 -P(X < 1) = 0 + 1 - 0 = 1.$
+$\begin{aligned}P(|X| > 1) &= P(X > 1 \cup X < -1) = \\
+&= P(X < -1) + 1 - P(X < 1) = \\
+&= 0 + 1 - 0 = 1.\end{aligned}$
 
 Mediana:
 
@@ -1679,15 +1688,21 @@ Niech $f(x) = \frac{1}{\pi} \cdot \frac{1}{1+x^2} \ \text{dla } x \in \mathbb{R}
 
 $F(x) = \frac{1}{\pi} \int\limits_{-\infty}^t \frac{dx}{1 + x^2} = \frac{1}{\pi}\arctan(x)\bigr|_{-\infty}^t = \frac{1}{\pi}(\arctan(t) + \frac{\pi}{2}) \ \text{dla } t \in \mathbb{R}$
 
-$$E(X) = \frac{1}{\pi} \int\limits_{-\infty}^\infty \frac{xdx}{1 + x^2} = \left|\begin{aligned} t = x^2 \\ 2xdx = dt \end{aligned}\right| = \frac{1}{2\pi} \int\limits_{\infty}^\infty \frac{xdx}{1 + t} = \frac{1}{2\pi} \ln(1 + t)\biggr|_\infty^\infty = \infty - \infty,$$
+$E(X) = \frac{1}{\pi} \int\limits_{-\infty}^\infty \frac{xdx}{1 + x^2} = \left|\begin{aligned} t = x^2 \\ 2xdx = dt \end{aligned}\right| = \frac{1}{2\pi} \int\limits_{\infty}^\infty \frac{xdx}{1 + t} = \frac{1}{2\pi} \ln(1 + t)\biggr|_\infty^\infty = \infty - \infty,$
 
 czyli wartość oczekiwana nie istnieje.
 
-$P(0 < X \le 1) = P(X \le 1) - P(X < 0) = \frac{1}{\pi}(\arctan(1) + \frac{\pi}{2}) - \frac{1}{\pi}(\arctan(0) + \frac{\pi}{2}) = \frac{1}{4},$
+$\begin{aligned}P(0 < X \le 1) &= P(X \le 1) - P(X < 0) = \\
+&= \frac{1}{\pi}(\arctan(1) + \frac{\pi}{2}) - \frac{1}{\pi}(\arctan(0) + \frac{\pi}{2}) = \\
+&= \frac{1}{4},\end{aligned}$
 
-$P(3X − 1 > \sqrt{3} − 1) = P(3X > \sqrt{3}) = 1 - P(X < \frac{\sqrt{3}}{3}) = 1 - \frac{1}{\pi}(\arctan(\frac{\sqrt{3}}{3}) + \frac{\pi}{2}) = \frac{1}{3},$
+$\begin{aligned}P(3X − 1 > \sqrt{3} − 1) &= P(3X > \sqrt{3}) = 1 - P(X < \frac{\sqrt{3}}{3}) = 
+\\
+&= 1 - \frac{1}{\pi}(\arctan(\frac{\sqrt{3}}{3}) + \frac{\pi}{2}) = \frac{1}{3},\end{aligned}$
 
-$P(0 < X < \sqrt{3}) = P(X < \sqrt{3}) - P(X < 0) = \frac{1}{\pi}(\arctan(\sqrt{3}) + \frac{\pi}{2}) - \frac{1}{\pi}(\arctan(0) + \frac{\pi}{2}) = \frac{1}{3}.$
+$\begin{aligned}P(0 < X < \sqrt{3}) &= P(X < \sqrt{3}) - P(X < 0) = \\
+&= \frac{1}{\pi}(\arctan(\sqrt{3}) + \frac{\pi}{2}) - \frac{1}{\pi}(\arctan(0) + \frac{\pi}{2}) = \\
+&= \frac{1}{3}.\end{aligned}$
 
 Mediana:
 
@@ -1715,27 +1730,31 @@ $x = 0.$
 ## Zadanie 55
 Zmienna $X$ ma gęstość postaci
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 0                   & \text{dla } x < 0, \\
 xe^{-\frac{x^2}{2}} & \text{dla } x \ge 0.
-\end{cases}$$
+\end{cases}$
 
 Znaleźć dystrybuantę, medianę, modę, wartość oczekiwaną, $P(X > \sqrt{\ln4})$, $P(X \le \sqrt{\ln9})$.
 
 ```{dropdown} Rozwiązanie
 
-$$\int\limits_0^t xe^{-\frac{x^2}{2}}dx = \left|\begin{aligned} z = \frac{x^2}{2} \\ dz = xdx\end{aligned}\right| = \int\limits_0^{t} e^{-z}dz = -e^{-z}\bigr|_0^t = -e^{-\frac{x^2}{2}}\bigr|_0^t = -(e^{-\frac{t^2}{2}} - e^{-\frac{0}{2}}) = 1 - e^{-\frac{t^2}{2}},$$
+$\int\limits_0^t xe^{-\frac{x^2}{2}}dx = \left|\begin{aligned} z = \frac{x^2}{2} \\ dz = xdx\end{aligned}\right| = \int\limits_0^{t} e^{-z}dz = -e^{-z}\bigr|_0^t = -e^{-\frac{x^2}{2}}\bigr|_0^t = -(e^{-\frac{t^2}{2}} - e^{-\frac{0}{2}}) = 1 - e^{-\frac{t^2}{2}},$
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0                      & \text{dla } x < 0, \\
 1 - e^{-\frac{x^2}{2}} & \text{dla } x \ge 1.
-\end{cases}$$
+\end{cases}$
 
 $E(X) = \int\limits_0^\infty x^2e^{-\frac{x^2}{2}} = \frac{\sqrt{2\pi}}{2}.$
 
-$P(X > \sqrt{\ln4}) = 1 - P(X < \sqrt{\ln4}) = 1 - 1 + e^{-\frac{(\sqrt{\ln4})^2}{2}} = e^{-\frac{\ln4}{2}} = \exp(\ln(4^{-0.5})) = \exp(\ln(\frac{1}{2})) = \frac{1}{2},$
+$\begin{aligned}P(X > \sqrt{\ln4}) &= 1 - P(X < \sqrt{\ln4}) = 1 - 1 + e^{-\frac{(\sqrt{\ln4})^2}{2}} = \\
+&= e^{-\frac{\ln4}{2}} = \exp(\ln(4^{-0.5})) = \\
+&= \exp(\ln(\frac{1}{2})) = \frac{1}{2},\end{aligned}$
 
-$P(X \le \sqrt{\ln9}) = 1 - e^{-\frac{(\sqrt{\ln9})^2}{2}} = 1 - e^{-\frac{\ln9}{2}} =1 - \exp(\ln(9^{-0.5})) =1- \exp(\ln(\frac{1}{3})) = 1- \frac{1}{3} = \frac{2}{3}.$
+$\begin{aligned}P(X \le \sqrt{\ln9}) &= 1 - e^{-\frac{(\sqrt{\ln9})^2}{2}} = 1 - e^{-\frac{\ln9}{2}} = \\
+&= 1 - \exp(\ln(9^{-0.5})) = 1- \exp(\ln(\frac{1}{3})) = \\
+&= 1- \frac{1}{3} = \frac{2}{3}.\end{aligned}$
 
 Poniższe równania mają dwa rozwiązania ale należy wziąć pod uwagę, że $x \ge 0$ co ostatecznie da jeden dodatni wynik.
 
@@ -1769,10 +1788,10 @@ $x = 1.$
 ## Zadanie 56
 Zmienna $X$ ma gęstość postaci
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 \frac{1}{\pi} \cdot \frac{1}{\sqrt{4-x^2}} & \text{dla } |x| < 2. \\
 0                                          & \text{w p.p.}
-\end{cases}$$
+\end{cases}$
 
 Zbadać istnienie $E(X)$. Wyznaczyć dystrybuantę $X$ oraz obliczyć $P(1 < X \le 2)$.
 
@@ -1780,21 +1799,17 @@ Zbadać istnienie $E(X)$. Wyznaczyć dystrybuantę $X$ oraz obliczyć $P(1 < X \
 
 $E(X) = \int\limits_{-2}^2 \frac{1}{\pi} \cdot \frac{xdx}{\sqrt{4-x^2}} = 0.$
 
-$$\frac{1}{\pi} \int\limits_{-2}^t \frac{1}{\sqrt{4-x^2}}dx = 
-\frac{1}{\pi} \int\limits_{-2}^t \frac{1}{2\sqrt{1-(\frac{x}{2})^2}}dx = $$
+$\begin{aligned}\frac{1}{\pi} \int\limits_{-2}^t \frac{1}{\sqrt{4-x^2}}dx &= 
+\frac{1}{\pi} \int\limits_{-2}^t \frac{1}{2\sqrt{1-(\frac{x}{2})^2}}dx = \left|\begin{aligned} sin(z) &= \frac{x}{2} \\ cos(z)dz &= \frac{dx}{2}\end{aligned}\right| = \\
+&= \frac{1}{\pi} \int\limits_{-2}^t \frac{cos(z)dz}{\sqrt{1-sin^2(z)}} = \frac{1}{\pi} \int\limits_{-2}^t \frac{cos(z)dz}{\sqrt{cos^2(z)}}= \\
+&= \frac{1}{\pi} \int\limits_{-2}^t dz = \frac{1}{\pi} z\biggr|_{-2}^t = \frac{1}{\pi} arcsin(\frac{x}{2})\biggr|_{-2}^t = \\
+&= \frac{1}{\pi}(arcsin(\frac{t}{2})+\frac{\pi}{2}) = \frac{1}{\pi}arcsin(\frac{t}{2})+\frac{1}{2}\end{aligned}$
 
-$$\left|\begin{aligned} sin(z) = \frac{x}{2} \\ cos(z)dz = \frac{dx}{2}\end{aligned}\right| = 
-\frac{1}{\pi} \int\limits_{-2}^t \frac{cos(z)dz}{\sqrt{1-sin^2(z)}}= 
-\frac{1}{\pi} \int\limits_{-2}^t \frac{cos(z)dz}{\sqrt{cos^2(z)}}=$$
-
-$$\frac{1}{\pi} \int\limits_{-2}^t dz = \frac{1}{\pi} z\biggr|_{-2}^t = 
-\frac{1}{\pi} arcsin(\frac{x}{2})\biggr|_{-2}^t = \frac{1}{\pi}(arcsin(\frac{t}{2})+\frac{\pi}{2}) = \frac{1}{\pi}arcsin(\frac{t}{2})+\frac{1}{2}$$
-
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0                                            & \text{dla } x < -2, \\
 \frac{1}{\pi}arcsin(\frac{t}{2})+\frac{1}{2} & \text{dla } x \in [-2, 2), \\
 1                                            & \text{dla } x \ge 2.
-\end{cases}$$
+\end{cases}$
 
 $P(1 < X \le 2) = P(X \le 2) - P(X < 1) = 1 - \frac{1}{\pi}arcsin(\frac{1}{2}) - \frac{1}{2} = \frac{1}{3}$
 ```
@@ -1802,10 +1817,10 @@ $P(1 < X \le 2) = P(X \le 2) - P(X < 1) = 1 - \frac{1}{\pi}arcsin(\frac{1}{2}) -
 ## Zadanie 57
 Zmienna $X$ ma gęstość postaci
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 e^{2x} & \text{dla } x \in (0, \ln\sqrt{3}). \\
 0      & \text{w p.p.}
-\end{cases}$$
+\end{cases}$
 
 Znaleźć $P(\ln2 < X \le 1)$, $P(X < \ln\frac{1}{2})$.
 
@@ -1825,11 +1840,11 @@ $\ln\frac{1}{2} < 0.$
 ## Zadanie 58
 Dobrać $A$ i $B$ tak, by funkcja
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0                      & \text{dla } x \le -1, \\
 A + B \cdot \arccos(x) & \text{dla } x \in (-1, 1]. \\
 1                      & \text{dla }  > 1.
-\end{cases}$$
+\end{cases}$
 
 była dystrybuantą pewnej ciągłej zmiennej losowej $X$. Znaleźć funkcję
 gęstości, obliczyć $P(0 < X \le 1)$, $P(X > \frac{1}{2})$.
@@ -1838,10 +1853,10 @@ gęstości, obliczyć $P(0 < X \le 1)$, $P(X > \frac{1}{2})$.
 
 Korzystam z własności dystrybuanty:
 
-$$\begin{cases}
+$\begin{cases}
 1 = A + B\cdot \arccos(1) \\
 0 = A + B\cdot \arccos(-1)
-\end{cases}$$
+\end{cases}$
 
 Odejmuję stronami:
 
@@ -1853,18 +1868,18 @@ $B = -\frac{1}{\pi},$
 
 $A = -B \cdot \arccos(-1) = \frac{1}{\pi}\cdot \pi = 1$
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0                                 & \text{dla } x \le -1, \\
 1 - \frac{1}{\pi}\cdot \arccos(x) & \text{dla } x \in (-1, 1]. \\
 1                                 & \text{dla } x > 1.
-\end{cases}$$
+\end{cases}$
 
 Gęstość:
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 \frac{1}{\pi\sqrt{1-x^2}} & \text{dla } x \in (-1, 1), \\
 0                         & \text{w p.p.}
-\end{cases}$$
+\end{cases}$
 
 $P(0 < X \le 1) = P(X \le 1) - P(X < 0) = 1 - 1 + \frac{1}{\pi}\cdot \arccos(0) = \frac{1}{2},$
 
@@ -1895,16 +1910,17 @@ $X+Y=10,$
 
 $Y = 10 - X,$
 
-$E(Z) = E(XY) = E[X(10-X)] = E(10X-X^2) = 10E(X) - E(X^2) = 10\cdot\frac{10}{2} - \frac{100}{3} = \frac{50}{3}.$
+$\begin{aligned}E(Z) &= E(XY) = E[X(10-X)] = E(10X-X^2) = 10E(X) - E(X^2) = \\
+&= 10\cdot\frac{10}{2} - \frac{100}{3} = \frac{50}{3}.\end{aligned}$
 ```
 
 ## Zadanie 60
 Zmienna $X$ ma gęstość postaci
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 0       & \text{dla } x < 0, \\ 
 xe^{-x} & \text{dla } x \ge 0.
-\end{cases}$$
+\end{cases}$
 
 Wyznaczyć dystrybuantę oraz $P(0 < X < \ln2)$.
 
@@ -1917,21 +1933,22 @@ $= \left[-xe^{-x} - e^{-x}\right]_0^t$\
 $= \left(-te^{-t} - e^{-t}\right) - \left(0e^{-0} - e^{-0}\right)$\
 $= 1 - te^{-t} - e^{-t}$
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0                    & \text{dla } x < 0, \\
 1 - xe^{-x} - e^{-x} & \text{dla } x \ge 0. \\
-\end{cases}$$
+\end{cases}$
 
-$P(0 < X < \ln2) = P(X < \ln2) - P(X < 0) = 1 - \ln2 \cdot e^{-\ln2} - e^{-\ln2} = 1 - \frac{1}{2}\ln2 - \frac{1}{2} = \frac{1}{2} - \frac{1}{2}\ln2$
+$\begin{aligned}P(0 < X < \ln2) &= P(X < \ln2) - P(X < 0) = 1 - \ln2 \cdot e^{-\ln2} - e^{-\ln2} = \\
+&= 1 - \frac{1}{2}\ln2 - \frac{1}{2} = \frac{1}{2} - \frac{1}{2}\ln2\end{aligned}$
 ```
 
 ## Zadanie 61
 Dobrać tak stała $k$, by funkcja
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 k\cdot \arcsin(x) & \text{dla } x \in [0, 1], \\
 0                & \text{w p.p}, \\ 
-\end{cases}$$
+\end{cases}$
 
 była gęstością pewnej zmiennej losowej $X$.
 
@@ -1949,20 +1966,20 @@ $k = \frac{2}{\pi-2}.$
 ## Zadanie 62
 Zmienna losowa $X$ ma dystrybuantę postaci
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0         & \text{dla } x \le 0, \\
 3x^2-2x^3 & \text{dla } x \in (0, 1]. \\
 1         & \text{dla } x > 1.
-\end{cases}$$
+\end{cases}$
 
 Znaleźć funkcję gęstości. Obliczyć $E(X)$, $Var(X)$, $P(0 < X < \frac{1}{2})$, $P(X > \frac{1}{3})$.
 
 ```{dropdown} Rozwiązanie
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 6x-6x^2 & \text{dla } x \in (0, 1), \\
 0       & \text{w p.p.}
-\end{cases}$$
+\end{cases}$
 
 $E(X) = \int\limits_0^1 6x^2-6x^3 = 0.5,$
 
@@ -1973,24 +1990,25 @@ $Var(X) = 0.3 - 0.25= 0.05.$
 $P(0 < X < \frac{1}{2}) = P(X < \frac{1}{2}) - P(X < 0) = 3(\frac{1}{2})^2-2(\frac{1}{2})^3 = 0.5,$
 
 $P(X > \frac{1}{3}) = 1 - P(X < \frac{1}{3}) = 1 - 3(\frac{1}{3})^2 + 2(\frac{1}{3})^3 = \frac{20}{27}.$
+```
 
 ## Zadanie 63
 Dystrybuanta pewnej zmiennej losowej $X$ jest postaci
 
-$$F(x) = \begin{cases}
+$F(x) = \begin{cases}
 0   & \text{dla } x \le 0, \\
 x^3 & \text{dla } x \in (0, 1], \\
 1   & \text{dla } x > 1.
-\end{cases}$$
+\end{cases}$
 
 Znaleźć funkcję gęstości, obliczyć $E(X)$, $Var(X)$, $P(0 < X <\frac{1}{2})$, medianę oraz $x_{0.2}$ i $x_{0.729}$.
 
 ```{dropdown} Rozwiązanie
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 3x^2 & \text{dla } x \in (0, 1), \\
 0    & \text{w p.p.}
-\end{cases}$$
+\end{cases}$
 
 $E(X) = \int\limits_0^1 3x^3 dx = \frac{3}{4},$
 
@@ -2028,39 +2046,18 @@ $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
 
 Należy doprowadzić poniższe równania do takiej postaci aby pojawiała się gęstość rozkładu normalnego, wtedy całka będzie wynosić 1.
 
-$E(Y) =$
+$\begin{aligned}E(Y) &= E(e^X) = \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}e^x dx = \\
+&= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2 - 2\sigma^2 x}{2\sigma^2}} dx = \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{x^2-2\mu x +\mu^2 - 2\sigma^2 x}{2\sigma^2}} dx = \\
+&= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{x^2-2(\mu + \sigma^2)x + (\mu + \sigma^2)^2 - (\mu + \sigma^2)^2 + \mu^2}{2\sigma^2}} dx = \\
+&= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-2(\mu + \sigma^2))^2 - (\mu + \sigma^2)^2 + \mu^2}{2\sigma^2}} dx = \\
+&= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-2(\mu + \sigma^2))^2}{2\sigma^2} - \frac{\mu^2-(\mu + \sigma^2)^2}{2\sigma^2}} dx = \\
+&= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-2(\mu + \sigma^2))^2}{2\sigma^2}} e^{-\frac{\mu^2-(\mu + \sigma^2)^2}{2\sigma^2}} dx = \\
+&= e^{-\frac{\mu^2-(\mu + \sigma^2)^2}{2\sigma^2}} = \\
+&= e^{\mu + \frac{\sigma^2}{2}}\end{aligned}$
 
-$= E(e^X)$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}e^x dx$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2 - 2\sigma^2 x}{2\sigma^2}} dx$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{x^2-2\mu x +\mu^2 - 2\sigma^2 x}{2\sigma^2}} dx$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{x^2-2(\mu + \sigma^2)x + (\mu + \sigma^2)^2 - (\mu + \sigma^2)^2 + \mu^2}{2\sigma^2}} dx$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-2(\mu + \sigma^2))^2 - (\mu + \sigma^2)^2 + \mu^2}{2\sigma^2}} dx$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-2(\mu + \sigma^2))^2}{2\sigma^2} - \frac{\mu^2-(\mu + \sigma^2)^2}{2\sigma^2}} dx$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-2(\mu + \sigma^2))^2}{2\sigma^2}} e^{-\frac{\mu^2-(\mu + \sigma^2)^2}{2\sigma^2}} dx$
-
-$= e^{-\frac{\mu^2-(\mu + \sigma^2)^2}{2\sigma^2}}$
-
-$= e^{\mu + \frac{\sigma^2}{2}}$
-
-$E(Y^2) =$
-
-$= E(e^2X)$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}e^{2x} dx$
-
-$= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-(\mu+2\sigma^2))^2}{2\sigma^2}} e^{-\frac{(\mu^2-(\mu+2\sigma^2)^2)}{2\sigma^2}}dx$
-
-$= e^{-\frac{(\mu^2-(\mu+2\sigma^2)^2)}{2\sigma^2}}$
-
-$= e^{2\mu + 2\sigma^2}$
+$\begin{aligned}E(Y^2) &= E(e^2X) = \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}e^{2x} dx = \\
+&= \int\limits_{-\infty}^\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-(\mu+2\sigma^2))^2}{2\sigma^2}} e^{-\frac{(\mu^2-(\mu+2\sigma^2)^2)}{2\sigma^2}}dx = e^{-\frac{(\mu^2-(\mu+2\sigma^2)^2)}{2\sigma^2}} = \\
+&= e^{2\mu + 2\sigma^2}\end{aligned}$
 
 $Var(Y) = e^{2\mu + 2\sigma^2} - \left(e^{\mu + \frac{\sigma^2}{2}}\right)^2 = e^{2\mu + \sigma^2} (e^{\sigma^2} - 1)$
 ```
@@ -2068,38 +2065,22 @@ $Var(Y) = e^{2\mu + 2\sigma^2} - \left(e^{\mu + \frac{\sigma^2}{2}}\right)^2 = e
 ## Zadanie 65
 Mówimy, że ciągła zmienna losowa $X$ ma rozkład gamma z parametrami $\alpha > 0$, $\beta > 0$, jeśli gęstość prawdopodobieństwa zmiennej $X$ jest postaci:
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 \frac{\beta^{\alpha} x^{\alpha - 1} e^{-\beta x}}{\Gamma(\alpha)} & \text{dla } x > 0, \\
 0                                                                 & \text{poza tym}.
-\end{cases}$$
+\end{cases}$
 
 Oblicz wartość oczekiwaną i wariancję zmiennej losowej $X$.
 
 ```{dropdown} Rozwiązanie
 
-$E(X) =$
+$\begin{aligned}E(X) &= \int\limits_{-\infty}^\infty \frac{\beta^{\alpha} x^{\alpha - 1} x e^{-\beta x}}{\Gamma(\alpha)} = \frac{\beta^\alpha\Gamma(\alpha+1)}{\beta^{\alpha+1}\Gamma(\alpha)} \int\limits_{-\infty}^\infty \frac{\beta^{\alpha+1}}{\Gamma(\alpha+1)} x^{(\alpha + 1)- 1} e^{-\beta x} = \\
+&= \frac{\Gamma(\alpha+1)}{\beta\Gamma(\alpha)} = \frac{\alpha\Gamma(\alpha)}{\beta\Gamma(\alpha)} = \\
+&= \frac{\alpha}{\beta},\end{aligned}$
 
-$= \int\limits_{-\infty}^\infty \frac{\beta^{\alpha} x^{\alpha - 1} x e^{-\beta x}}{\Gamma(\alpha)}$
-
-$= \frac{\beta^\alpha\Gamma(\alpha+1)}{\beta^{\alpha+1}\Gamma(\alpha)} \int\limits_{-\infty}^\infty \frac{\beta^{\alpha+1}}{\Gamma(\alpha+1)} x^{(\alpha + 1)- 1} e^{-\beta x}$
-
-$= \frac{\Gamma(\alpha+1)}{\beta\Gamma(\alpha)}$
-
-$= \frac{\alpha\Gamma(\alpha)}{\beta\Gamma(\alpha)}$
-
-$= \frac{\alpha}{\beta},$
-
-$E(X^2) =$
-
-$= \int\limits_{-\infty}^\infty \frac{\beta^{\alpha} x^{\alpha - 1} x^2 e^{-\beta x}}{\Gamma(\alpha)}$
-
-$= \frac{\beta^\alpha\Gamma(\alpha+2)}{\beta^{\alpha+2}\Gamma(\alpha)} \int\limits_{-\infty}^\infty \frac{\beta^{\alpha+2}}{\Gamma(\alpha+2)} x^{(\alpha + 2)- 1} e^{-\beta x}$
-
-$= \frac{\Gamma(\alpha+2)}{\beta^2\Gamma(\alpha)}$
-
-$= \frac{(\alpha+1)\alpha\Gamma(\alpha)}{\beta^2\Gamma(\alpha)}$
-
-$= \frac{\alpha^2+\alpha}{\beta^2},$
+$\begin{aligned}E(X^2) &= \int\limits_{-\infty}^\infty \frac{\beta^{\alpha} x^{\alpha - 1} x^2 e^{-\beta x}}{\Gamma(\alpha)} = \frac{\beta^\alpha\Gamma(\alpha+2)}{\beta^{\alpha+2}\Gamma(\alpha)} \int\limits_{-\infty}^\infty \frac{\beta^{\alpha+2}}{\Gamma(\alpha+2)} x^{(\alpha + 2)- 1} e^{-\beta x} = \\
+&= \frac{\Gamma(\alpha+2)}{\beta^2\Gamma(\alpha)} = \frac{(\alpha+1)\alpha\Gamma(\alpha)}{\beta^2\Gamma(\alpha)} = \\
+&= \frac{\alpha^2+\alpha}{\beta^2},\end{aligned}$
 
 $Var(X) = \frac{\alpha^2+\alpha}{\beta^2} - \frac{\alpha^2}{\beta^2} = \frac{\alpha}{\beta^2}.$
 ```
@@ -2113,14 +2094,17 @@ b) $U = min(X, Y)$.
 
 a)
 
-$P(Z < z) = P(max(X,Y)<z) = P(X<z, Y<z) = P(X<z)P(Y<z)=F^2$
+$\begin{aligned}P(Z < z) &= P(max(X,Y)<z) = P(X<z, Y<z) = \\
+&= P(X<z)P(Y<z)=F^2\end{aligned}$
 
 $f_Z(z) = 2Ff$
 
 b)
 
-$P(U < u) = P(min(X,Y)<u) = 1 - P(min(X,Y)>u) = 1 - P(X>u,Y>u)$
-$ = 1 - P(X>u)p(Y>u)= 1 - (1 - P(X<u))(1 - P(Y<u)) = 1-(1-F)(1-F)=1-(1-F)^2$
+$\begin{aligned}P(U < u) &= P(min(X,Y)<u) = 1 - P(min(X,Y)>u) = \\
+&= 1 - P(X>u,Y>u) = 1 - P(X>u)p(Y>u) = \\
+&= 1 - (1 - P(X<u))(1 - P(Y<u)) = 1-(1-F)(1-F) = \\
+&= 1-(1-F)^2\end{aligned}$
 
 $f_U(u) = 2f(1-F)$
 ```
@@ -2136,22 +2120,27 @@ d) $W = min(X^2, Y)$.
 
 a)
 
-$P(Z < z) = P(max(X,Y)<z) = P(X<z, Y<z) = P(X<z)P(Y<z)=FG$
+$\begin{aligned}P(Z < z) &= P(max(X,Y)<z) = P(X<z, Y<z) = \\
+&= P(X<z)P(Y<z) = FG\end{aligned}$
 
 b)
 
-$P(U < u) = P(min(X,Y)<u) = 1 - P(min(X,Y)>u) = 1 - P(X>u,Y>u)$
-$ = 1 - P(X>u)p(Y>u)= 1 - (1 - P(X<u))(1 - P(Y<u)) = 1-(1-F)(1-G)$
+$\begin{aligned}P(U < u) &= P(min(X,Y)<u) = 1 - P(min(X,Y)>u) = \\
+&= 1 - P(X>u,Y>u) = 1 - P(X>u)p(Y>u) = \\
+&= 1 - (1 - P(X<u))(1 - P(Y<u)) = 1-(1-F)(1-G)\end{aligned}$
 
 c)
 
-$P(V < v) = P(max(2X,Y)<v) = P(2X<v, Y<v) = P(X<\frac{v}{2})P(Y<v)=F(\frac{v}{2})G(v)$
+$\begin{aligned}P(V < v) &= P(max(2X,Y)<v) = P(2X<v, Y<v) = \\
+&= P(X<\frac{v}{2})P(Y<v) = F(\frac{v}{2})G(v)\end{aligned}$
 
 d)
 
-$P(W < w) = P(min(X^2,Y)<w) = 1 - P(min(X^2,Y)>w) = 1 - P(X^2>w,Y>w)$
-$ = 1 - P(X^2>w)P(Y>w)= 1 - (1 - P(X^2<w))(1 - P(Y<w))$
-$ = 1 - (1 - P(-\sqrt{w}<X<\sqrt{w}))(1 - G(w)) = 1 - (1 - F(\sqrt{w})+F(\sqrt{w}))(1 - G(w))$
+$\begin{aligned}P(W < w) &= P(min(X^2,Y)<w) = 1 - P(min(X^2,Y)>w) = \\
+&= 1 - P(X^2>w,Y>w) = 1 - P(X^2>w)P(Y>w) = \\
+&= 1 - (1 - P(X^2<w))(1 - P(Y<w)) = \\
+&= 1 - (1 - P(-\sqrt{w}<X<\sqrt{w}))(1 - G(w)) = \\
+&= 1 - (1 - F(\sqrt{w})+F(\sqrt{w}))(1 - G(w))\end{aligned}$
 ```
 
 ## Zadanie 68
@@ -2180,15 +2169,15 @@ $ = q \mathbb{1}_{(-\infty, 0)} + pF_X(y)$
 
 Ostatecznie:
 
-$$
+$
 F_Y(y)={\begin{cases}
 0         & {\text{dla }} y<0,\\
 q         & {\text{dla }} y=0,\\
 q+pF_X(y) & {\text{dla }} y>0.
 \end{cases}}
-$$
+$
 
-$$
+$
 f_Y(y)= pf_X(y) \text{   dla } y>0.
-$$
+$
 ```
