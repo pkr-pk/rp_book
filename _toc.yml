@@ -30,3 +30,6 @@ chapters:
 - file: chapters/funkcje_charakterystyczne/funkcje_charakterystyczne
   sections:
   - file: chapters/funkcje_charakterystyczne/zadania
+- file: chapters/dwuwymiarowe_zmienne_losowe_dyskretne/dwuwymiarowe_zmienne_losowe_dyskretne
+  sections:
+  - file: chapters/dwuwymiarowe_zmienne_losowe_dyskretne/zadania
