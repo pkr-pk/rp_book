@@ -320,8 +320,13 @@ Wyznaczyć za pomocą funkcji charakterystycznych:\
 a) drugi moment zwykły rozkładu Poissona,\
 b) trzeci moment zwykły rozkładu dwumianowego, \
 c) czwarty moment zwykły rozkładu $N(0, 1)$, \
-d) k-ty moment zwykły rozkładu wykładniczego, o gęstości $f(x) = \frac{1}{\lambda}\exp(-\frac{x}{\lambda})$ dla $x>0$, $\lambda>0$,\
-e) k-ty moment zwykły dwuparametrowego rozkładu gamma o gęstości $f(x) = \frac{a^p}{\Gamma(p)}x^{p-1}e^{-ax}$ dla $x>0$, $a, p >0$.
+d) k-ty moment zwykły rozkładu wykładniczego, o gęstości 
+
+$f(x) = \frac{1}{\lambda}\exp(-\frac{x}{\lambda})$ dla $x>0$, $\lambda>0$,
+
+e) k-ty moment zwykły dwuparametrowego rozkładu gamma o gęstości 
+
+$f(x) = \frac{a^p}{\Gamma(p)}x^{p-1}e^{-ax}$ dla $x>0$, $a, p >0$.
 
 ```{dropdown} Rozwiązanie
 
@@ -345,17 +350,21 @@ $\phi(t) = (pe^{it}+q)^n,$
 
 $\phi'(t) = inpe^{it}(e^{i t}p + q)^{n-1},$
 
-$\phi''(t) = -npe^{it}(e^{it}p + q)^{n-1} - (n-1)np^2e^{2it}(e^{it}p + q)^{n-2}$
+$\phi''(t) = -npe^{it}(e^{it}p + q)^{n-1} - (n-1)np^2e^{2it}(e^{it}p + q)^{n-2},$
 
-$\phi'''(t) = -inpe^{it}(e^{it}p + q)^{n-1}-3in(n-1)p^2e^{2it}(e^{it}p + q)^{n-2} - in(n-1)(n-2)p^3e^{3it}(e^{it}p + q)^{n-3}$
+$\begin{aligned}\phi'''(t) &= -inpe^{it}(e^{it}p + q)^{n-1}-3in(n-1)p^2e^{2it}(e^{it}p + q)^{n-2} - \\
+&- in(n-1)(n-2)p^3e^{3it}(e^{it}p + q)^{n-3},\end{aligned}$
 
-$\phi'''(0) = -inp(p + q)^{n-1}-3in(n-1)p^2(p + q)^{n-2} - in(n-1)(n-2)p^3(p + q)^{n-3},$
+$\begin{aligned}\phi'''(0) &= -inp(p + q)^{n-1}-3in(n-1)p^2(p + q)^{n-2} - \\
+&- in(n-1)(n-2)p^3(p + q)^{n-3},\end{aligned}$
 
 ponieważ $q = 1 - p$ to:
 
-$\phi'''(0) = -inp - 3in(n-1)p^2 - in(n-1)(n-2)p^3 = -inp[1 + 3(n-1)p + (n-1)(n-2)p^2].$
+$\begin{aligned}\phi'''(0) &= -inp - 3in(n-1)p^2 - in(n-1)(n-2)p^3 = \\
+&= -inp[1 + 3(n-1)p + (n-1)(n-2)p^2].\end{aligned}$
 
-$EX^3 = -\frac{1}{i^3}inp[1 + 3(n-1)p + (n-1)(n-2)p^2] = np[1 + 3(n-1)p + (n-1)(n-2)p^2]$
+$\begin{aligned}EX^3 &= -\frac{1}{i^3}inp[1 + 3(n-1)p + (n-1)(n-2)p^2] = \\
+&= np[1 + 3(n-1)p + (n-1)(n-2)p^2].\end{aligned}$
 
 c)
 
@@ -377,9 +386,9 @@ Druga metoda:
 
 Jeżeli znamy rozwinięcie funkcji eksponent w szereg Maclaurina to możemy w szybki sposób wyznaczyć k-ty moment zwykły danego rozkładu.
 
-$$\exp(t) = \sum\limits_{k=0}^\infty \frac{t^k}{k!} \text{ dla } r\in\mathbb{R},$$
+$\exp(t) = \sum\limits_{k=0}^\infty \frac{t^k}{k!} \text{ dla } r\in\mathbb{R},$
 
-$$\exp(-\frac{t^2}{2}) = \sum\limits_{k=0}^\infty \frac{\left(-\frac{t^2}{2}\right)^k}{k!} = \sum\limits_{k=0}^\infty \frac{\left(-1\right)^k t^{2k}}{2^k k!} \text{ dla } r\in\mathbb{R},$$
+$\exp(-\frac{t^2}{2}) = \sum\limits_{k=0}^\infty \frac{\left(-\frac{t^2}{2}\right)^k}{k!} = \sum\limits_{k=0}^\infty \frac{\left(-1\right)^k t^{2k}}{2^k k!} \text{ dla } r\in\mathbb{R},$
 
 Zgadnie z twierdzeniem I:
 
@@ -526,7 +535,8 @@ $X$ i $Y$ są niezależnymi zmiennymi losowymi o rozkładach normalnych: $N(\mu_
 
 Ponownie korzystam ze wzoru z zadania nr 2.
 
-$\phi(t) = \exp(i\mu_1at - \frac{\sigma^2a^2t^2}{2})\exp(i\mu_1bt - \frac{\sigma^2b^2t^2}{2}) = \exp\left[it(a\mu_1 + b\mu_2) - \frac{t^2}{2}(a^2\sigma_1^2 + b^2\sigma_2^2)\right],$
+$\begin{aligned}\phi(t) &= \exp(i\mu_1at - \frac{\sigma^2a^2t^2}{2})\exp(i\mu_1bt - \frac{\sigma^2b^2t^2}{2}) = \\
+&= \exp\left[it(a\mu_1 + b\mu_2) - \frac{t^2}{2}(a^2\sigma_1^2 + b^2\sigma_2^2)\right].\end{aligned}$
 
 Jest to funkcja charakterystyczna zmiennej losowej pochodzącej z rozkładu $N(a\mu_1 + b\mu_2, \sqrt{a^2\sigma_1^2 + b^2\sigma_2^2})$.
 ```
@@ -535,10 +545,10 @@ Jest to funkcja charakterystyczna zmiennej losowej pochodzącej z rozkładu $N(a
 
 Niech $X$ i $Y$ będą niezależnymi zmiennymi losowymi o tym samym rozkładzie wykładniczym o gęstości:
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 e^{-x} & \text{dla } x>0, \\
 0      & \text{dla } x\le0.
-\end{cases}$$
+\end{cases}$
 
 Wyznaczyć rozkład zmiennej losowej $Z = X - Y.$
 
@@ -566,10 +576,10 @@ gdzie $\overline{\phi(t)}$ oznacza liczbę zespoloną sprzężoną z $\phi(-t)$.
 
 Wyznaczyć funkcję charakterystyczną rozkładu prawdopodobieństwa o gęstości:
 
-$$f(x) = \begin{cases}
+$f(x) = \begin{cases}
 \frac{1}{2}-\frac{|x|}{4} & \text{dla } |x| \le 2, \\
 0                         & \text{dla pozostałych } x.
-\end{cases}$$
+\end{cases}$
 
 ```{dropdown} Rozwiązanie
 
@@ -577,51 +587,27 @@ $\phi(t) = \int\limits_{-2}^2 \left(\frac{1}{2}-\frac{|x|}{4}\right)e^{itx}dx = 
 
 Obliczę powyższe całki oddzielnie:
 
-$\int\limits_{-2}^0 \left(\frac{1}{2} + \frac{x}{4}\right) e^{itx} dx =$
+$\int\limits_{-2}^0 \left(\frac{1}{2} + \frac{x}{4}\right) e^{itx} dx = \int\limits_{-2}^0 \left(\frac{1}{2} + \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right)' dx =$
 
-$= \int\limits_{-2}^0 \left(\frac{1}{2} + \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right)' dx$
+$= \left[\left(\frac{1}{2} + \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) - \int\limits_{-2}^0 \frac{1}{4it} e^{itx} dx \right]_{-2}^0 = \left[\left(\frac{1}{2} + \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) - \frac{e^{itx}}{4i^2t^2}  \right]_{-2}^0 =$
 
-$= \left[\left(\frac{1}{2} + \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) - \int\limits_{-2}^0 \frac{1}{4it} e^{itx} dx \right]_{-2}^0$
+$= \left[\left(\frac{1}{2} + \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) + \frac{e^{itx}}{4t^2}  \right]_{-2}^0 = \left[\frac{1}{2it} + \frac{1}{4t^2}  \right] - \left[\frac{e^{-2it}}{4t^2}  \right] =$
 
-$= \left[\left(\frac{1}{2} + \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) - \frac{e^{itx}}{4i^2t^2}  \right]_{-2}^0$
+$= \frac{-2it}{4t^2} + \frac{1}{4t^2} - \frac{e^{-2it}}{4t^2} = \frac{-2it + 1 - e^{-2it}}{4t^2}$
 
-$= \left[\left(\frac{1}{2} + \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) + \frac{e^{itx}}{4t^2}  \right]_{-2}^0$
+$\int\limits_0^2 \left(\frac{1}{2} - \frac{x}{4}\right) e^{itx} dx = \int\limits_0^2 \left(\frac{1}{2} - \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right)' dx =$
 
-$= \left[\frac{1}{2it} + \frac{1}{4t^2}  \right] - \left[\frac{e^{-2it}}{4t^2}  \right]$
+$= \left[\left(\frac{1}{2} - \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) + \int\limits_0^2 \frac{1}{4it} e^{itx} dx \right]_0^2= \left[\left(\frac{1}{2} - \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) + \frac{e^{itx}}{4i^2t^2}  \right]_0^2 =$
 
-$= \frac{-2it}{4t^2} + \frac{1}{4t^2} - \frac{e^{-2it}}{4t^2}$
+$= \left[\left(\frac{1}{2} - \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) - \frac{e^{itx}}{4t^2}  \right]_0^2 = \left[- \frac{e^{2it}}{4t^2} \right] - \left[\frac{1}{2it} - \frac{1}{4t^2} \right] =$
 
-$= \frac{-2it + 1 - e^{-2it}}{4t^2}$
-
-$\int\limits_0^2 \left(\frac{1}{2} - \frac{x}{4}\right) e^{itx} dx$
-
-$= \int\limits_0^2 \left(\frac{1}{2} - \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right)' dx$
-
-$= \left[\left(\frac{1}{2} - \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) + \int\limits_0^2 \frac{1}{4it} e^{itx} dx \right]_0^2$
-
-$= \left[\left(\frac{1}{2} - \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) + \frac{e^{itx}}{4i^2t^2}  \right]_0^2$
-
-$= \left[\left(\frac{1}{2} - \frac{x}{4}\right) \left(\frac{e^{itx}}{it}\right) - \frac{e^{itx}}{4t^2}  \right]_0^2$
-
-$= \left[- \frac{e^{2it}}{4t^2} \right] - \left[\frac{1}{2it} - \frac{1}{4t^2} \right]$
-
-$= - \frac{e^{2it}}{4t^2} + \frac{2it}{4t^2} + \frac{1}{4t^2}$
-
-$= \frac{-e^{2it} + 2it + 1}{4t^2}$
+$= - \frac{e^{2it}}{4t^2} + \frac{2it}{4t^2} + \frac{1}{4t^2} = \frac{-e^{2it} + 2it + 1}{4t^2}$
 
 Stąd:
 
-$\phi(t) =$
-
-$= \frac{-2it + 1 - e^{-2it}}{4t^2} + \frac{-e^{2it} + 2it + 1}{4t^2}$
-
-$= \frac{2 - e^{-2it} - e^{2it}}{4t^2}$
-
-$= \frac{2 - 2\left(\frac{e^{-2it} + e^{2it}}{2}\right)}{4t^2}$
-
-$= \frac{2 - 2\cos(2t)}{4t^2} = \frac{1 - \cos(2t)}{2t^2}$
-
-$= \frac{1 - 1 + 2\sin^2(t)}{2t^2} = \frac{\sin^2(t)}{t^2}$
+$\begin{aligned}\phi(t) &= \frac{-2it + 1 - e^{-2it}}{4t^2} + \frac{-e^{2it} + 2it + 1}{4t^2} = \frac{2 - e^{-2it} - e^{2it}}{4t^2} \\
+&= \frac{2 - 2\left(\frac{e^{-2it} + e^{2it}}{2}\right)}{4t^2} = \frac{2 - 2\cos(2t)}{4t^2} = \frac{1 - \cos(2t)}{2t^2} = \\
+&= \frac{1 - 1 + 2\sin^2(t)}{2t^2} = \frac{\sin^2(t)}{t^2}.\end{aligned}$
 ```
 
 ## Zadanie 13
